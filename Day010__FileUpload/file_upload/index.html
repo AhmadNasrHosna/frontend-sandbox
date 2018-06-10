@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Page Info -->
+    <title>File Upload</title>
+    <meta name="description" content="Front-end daily practise.">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+    <!--
+    • This page created on Jun 9, 2018.
+    It's a part of my Front-end web development daily practise.
+    I started on May 31, 2018.
+    I'm practising since 10 days and counting to reach my goal: 1111 days (3 years) of daily practise.
+
+    - UI design based on and inspired from: 
+    https://dribbble.com/
+
+    • My Personal Website:
+    • Twitter: @ahmedhosna95
+    -->
+
+<body>
+    <div class="wrapper">
+        <div class="files-to-upload">
+            <!-- Drag or Browse Block Area -->
+            <div class="drag-or-browse">
+                    <input type="file" name="file[]" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
+                    <label for="file"><span>Drag Files Here <br> or Browse</span></label>
+            </div>
+            <!-- Uploading Area -->
+            <div class="files-processing">
+                <div class="file-progress">
+                    <div class="file__extension">
+                        <div class="extension__icon">
+                            <span></span>
+                            <p class="file__type">PNG</p>
+                        </div>
+                    </div>
+                    <div class="group-wrapper">
+                        <h2 class="file__name">Some-beautiful-image.png</h2>
+                        <div class="progress-bar"><span style="width: 70%;"><small>70%</small></span></div>
+                        <i class="cancel-upload-icon"><span></span></i>
+                    </div>
+                </div>
+                <div class="file-progress">
+                    <div class="file__extension">
+                        <div class="extension__icon">
+                            <span></span>
+                            <p class="file__type">SVG</p>
+                        </div>
+                    </div>
+                    <div class="group-wrapper">
+                        <h2 class="file__name">beautiful-svg-file.svg</h2>
+                        <div class="progress-bar"><span style="width: 55%;"><small>55%</small></span></div>
+                        <i class="cancel-upload-icon"><span></span></i>
+                    </div>
+                </div>
+                <div class="file-progress">
+                    <div class="file__extension">
+                        <div class="extension__icon">
+                            <span></span>
+                            <p class="file__type">PSD</p>
+                        </div>
+                    </div>
+                    <div class="group-wrapper">
+                        <h2 class="file__name">PSD-file.psd</h2>
+                        <div class="progress-bar"><span style="width: 95%;"><small>95%</small></span></div>
+                        <i class="cancel-upload-icon"><span></span></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

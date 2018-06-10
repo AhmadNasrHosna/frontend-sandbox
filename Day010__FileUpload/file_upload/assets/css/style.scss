@@ -1,0 +1,259 @@
+// Colors 
+$mainTextColor: #f25c5c;
+$solidColor: #FF4646;
+$solidColorLight: #ffefef;
+
+$extBackgroundColor: #ffd3d3;
+$extBorderColor: #fe8f8f;
+$extTextColor: #fe7a7a;
+// Fonts
+$primaryFont: 'Roboto', sans-serif;;
+
+// General Vars
+$rad: 8px;
+
+html {
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    background: linear-gradient(#FF4646, #FFB94D);
+    background-attachment: fixed;
+    color: $mainTextColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: {
+        family: $primaryFont;
+    }
+}
+
+* {
+    box-sizing: inherit;
+    &::before, &::after {
+        box-sizing: inherit;
+    }
+    // Outline testing 
+    //outline: 1px dotted black;
+}
+
+// Global Styling 
+h2 {
+    font: {
+        size: 1.03em;
+        weight: 400;
+    }
+}
+
+
+
+// Global Reset
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+}
+
+
+// Input File
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile + label {
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.inputfile + label {
+    color: $mainTextColor;
+    -webkit-user-select: none;
+}
+
+/*
+.inputfile:focus + label,
+.inputfile.has-focus + label,
+.inputfile + label:hover {
+} */
+
+
+
+// =================
+
+.wrapper {
+    width: 650px;
+    min-height: 400px;
+    padding: 2.5rem;
+    background: #fff;
+    border-radius: $rad;
+    box-shadow: 0 0 40px 0px rgba($solidColor, .7);
+    .files-to-upload {
+        .drag-or-browse {
+            height: 200px;
+            margin: 0 2.6rem 2.3rem;
+            background: $solidColorLight;
+            background-clip: padding-box;
+            border: 2px dashed $solidColor;
+            border-radius: $rad;
+            transition: background 300ms ease;
+            &:hover {
+                background: #fff;
+            }
+        }
+        .files-processing {
+                padding: 1.5rem 1.5rem;
+                border-radius: $rad;
+                position: relative;
+                background: linear-gradient(rgba(#FF4646, .6), #ffd495);
+                z-index: 1;
+            &::after {
+                content: "";
+                display: block;
+                background: white;
+                border-radius: $rad;
+                position: absolute;
+                top: 0px; bottom: 0px;
+                left: 0px; right: 0px;
+                border: 2px solid transparent;
+                background-clip: padding-box;
+                z-index: -1;
+            }
+
+            .file-progress {
+                display: flex;
+                justify-content: space-between;
+                &:not(:last-child) {
+                    margin-bottom: 1.7rem;
+                }
+                .file__extension {
+                    flex-basis: 5%;
+                    .extension__icon {
+                        width: 28px; height: 38px;
+                        background: $extBackgroundColor linear-gradient(to left, transparent 94%,#fff 94.35%);
+                        border: 1px solid $extBorderColor;
+                        border-radius: 4px;
+                        text-align: center;
+                        line-height: 30px;
+                        position: relative;
+                        span {
+                            display: block;
+                            width: 11px; height: 11px;
+                            background: $extBackgroundColor;
+                            position: absolute; right: -1px; top: -1px;
+                            border: 1px solid #fe8888;
+                            border-bottom-left-radius: 4px;
+                            &::after, &::before {
+                                content: "";
+                                display: block;
+                                width: 0px; height: 0px;
+                                border-left: 11px solid transparent;
+                                border-top: 11px solid #fff;
+                                position: absolute;
+                                right: -1.5px; top: -1.5px;
+                            }
+                            &::before {
+                                border-top: 11px solid #fe8888;
+                                right: -1px; top: -1px;
+                            }
+                        }
+                        &::after  {
+                            content: "";
+                            display: block;
+                            width: 1px; height: 8px; 
+                            border-top: 2.5px solid #fff;
+                            border-bottom: 1.5px solid #fff;
+                            background: $extBorderColor;
+                            position: absolute; top: 7px; left: -1px;
+                        }
+                        .file__type {
+                            color: $extTextColor;
+                            font-size: 6px;
+                            font-weight: 700;
+                            -webkit-user-select: none;
+                        }
+                    }
+                }
+                .group-wrapper {
+                    flex-basis: 91.6%;
+                    display: grid;
+                    grid-template-columns: 1fr 26px;
+                    grid-template-rows: auto;
+                    .file__name {
+                        grid-column: 1 / span 2;
+                        grid-row: 1;
+                        margin: .23rem 0 .6rem;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                    .progress-bar {
+                        grid-column: 1 / 2;
+                        background: #ffe6e6;
+                        border-radius: 50px;
+                        height: 8px;
+                        span {
+                            display: block;
+                            height: 100%;
+                            background: linear-gradient(to right, #ff724d, $solidColor);
+                            box-shadow: 0 5px 10px 0px rgba($solidColor, .2);
+                            border-radius: 50px;
+                            position: relative;
+                            small {
+                                position: absolute; top: -1.4rem; right: .5rem;
+                                font-size: 10px;
+                                padding: 2px 5px;;
+                                background: #fff;
+                                color: $solidColor;
+                                border-radius: $rad;
+                                box-shadow: 0 3px 3px rgba($solidColor, .15);
+                            }
+                        }
+                    }
+                    .cancel-upload-icon {
+                        grid-column: 2 / 3;
+                        justify-self: end;
+                        display: block;
+                        width: 11px; height: 11px; 
+                        font-size: 10px;
+                        padding: 2px 5px;;
+                        background: #fff;
+                        border-radius: 50%;
+                        box-shadow: 0 3px 3px rgba($solidColor, .15);
+                        margin-top: -3px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                        span {
+                            display: block;
+                            width: 1px; height: 6px;
+                            background: $solidColor;
+                            transform: rotate(45deg);
+                            &::after {
+                                content: "";
+                                display: block;
+                                background: $solidColor;
+                                width: 1px; height: 6px;
+                                transform: rotate(90deg);
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+
+    }
+}
