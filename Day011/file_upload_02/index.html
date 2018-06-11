@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Page Info -->
+    <title>File Upload</title>
+    <meta name="description" content="Front-end daily practise.">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Ionic Icons -->
+    <link rel="stylesheet" href="https://anandchowdhary.github.io/ionicons-3-cdn/icons.css" integrity="sha384-+iqgM+tGle5wS+uPwXzIjZS5v6VkqCUV7YQ/e/clzRHAxYbzpUJ+nldylmtBWCP0" crossorigin="anonymous">
+
+</head>
+
+    <!--
+    • This page created on Jun 10, 2018.
+    It's a part of my Front-end web development daily practise.
+    I started on May 31, 2018.
+    I'm practising since 11 days and counting to reach my goal: 1111 days (3 years) of daily practise.
+
+    - UI design based on and inspired from: 
+    https://dribbble.com/
+
+    • My Personal Website:
+    • Twitter: @ahmedhosna95
+    -->
+
+<body>
+    <div class="wrapper">
+        <div class="files-to-upload">
+            <!-- Drag or Browse Block Area -->
+            <div class="drag-or-browse">
+                <div class="inner-wrapper">
+                    <input type="file" name="file[]" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
+                    <label for="file"><span>Drag and drop files here or <span>select them from your computer.</span></span></label>
+                </div>
+            </div>
+            <!-- Uploading Area -->
+            <div class="files-processing">
+                <div class="inner-wrapper">
+                    <div class="file-progress file-progress--access ">
+                        <div class="file__extension">
+                            <div class="extension__icon pdf-file">
+                                <p class="file__type">PDF</p>
+                            </div>
+                        </div>
+                        <div class="group-wrapper">
+                            <h2 class="file__name">App Documentation.pdf</h2> <span class="file__size">1.2MB / 1.2MB</span>
+                            <div class="progress-bar"><span style="width: 70%;"><small>70%</small></span></div>
+                            <i class="cancel-upload-icon"><span></span></i>
+                        </div>
+                    </div>
+                    <div class="file-progress">
+                        <div class="file__extension">
+                            <div class="extension__icon sketch-file">
+                                <p class="file__type">SKETCH</p>
+                            </div>
+                        </div>
+                        <div class="group-wrapper">
+                            <h2 class="file__name">sketch-wireframe.sketch</h2> <span class="file__size">1.3MB / 2.3MB</span>
+                            <div class="progress-bar"><span style="width: 55%;"><small>55%</small></span></div>
+                            <i class="cancel-upload-icon"><span></span></i>
+                        </div>
+                    </div>
+                    <div class="file-progress">
+                        <div class="file__extension">
+                            <div class="extension__icon psd-file">
+                                <p class="file__type">PSD</p>
+                            </div>
+                        </div>
+                        <div class="group-wrapper">
+                            <h2 class="file__name">Landing-page.psd</h2> <span class="file__size">0MB / 15.3MB</span>
+                            <div class="progress-bar"><span style="width: 77%;"><small>77%</small></span></div>
+                            <i class="cancel-upload-icon"><span></span></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="upload-setting">
+                <span class="time-remaining">Time Remaining: <strong>2 minutes</strong></span>
+                <i class="ion ion-ios-settings"></i>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
