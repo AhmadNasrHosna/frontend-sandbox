@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Page Info -->
+    <title>File Upload</title>
+    <meta name="description" content="Front-end daily practise.">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="assets/fonts/fontawesome/css/font-awesome.min.css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i|Varela+Round" rel="stylesheet">
+
+</head>
+
+    <!--
+    • This page created on Jun 11, 2018.
+    It's a part of my Front-end web development daily practise.
+    I started on May 31, 2018.
+    I'm practising since 12 days and counting to reach my goal: 1111 days (3 years) of daily practise.
+
+    - UI design based on and inspired from: 
+    https://dribbble.com/shots/2639536-File-Upload/attachments/528752
+
+    • My Personal Website:
+    • Twitter: @ahmedhosna95
+    -->
+
+<body>
+    <div class="wrapper">
+        <div class="art">
+            <div class="sticker sticker-1">
+                <div class="bg-view"></div>
+                <span class="person-1"></span>
+                <span class="person-2"></span>
+            </div>
+            <div class="sticker sticker-2">
+                <span class="pyramide pyramide-1"></span>
+                <span class="pyramide pyramide-2"></span>
+            </div>
+            <div class="sticker sticker-3">
+                <div class="inner-border">
+                    <div class="photo"></div>
+                    <div class="lines"></div>
+                </div>
+            </div>
+            <div class="sticker sticker-4">
+                <span class="pyramide pyramide-1"></span>
+                <span class="pyramide pyramide-2"></span>
+                <span class="pyramide pyramide-3"></span>
+                <div class="cloud-wrapper cloud-1">
+                    <div class="cloud ">
+                        <span class="circle circle-1"></span>
+                        <span class="circle circle-2"></span>
+                        <span class="circle circle-3"></span>
+                        <span class="circle circle-4"></span>
+                    </div>
+                </div>
+                <div class="cloud-wrapper cloud-2">
+                    <div class="cloud">
+                        <span class="circle circle-1"></span>
+                        <span class="circle circle-2"></span>
+                        <span class="circle circle-3"></span>
+                        <span class="circle circle-4"></span>
+                    </div>
+                </div>
+                <div class="cloud-wrapper cloud-3">
+                    <div class="cloud">
+                        <span class="circle circle-1"></span>
+                        <span class="circle circle-2"></span>
+                        <span class="circle circle-3"></span>
+                        <span class="circle circle-4"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="sticker sticker-5"></div>
+            <div class="sticker sticker-6"></div>
+            <div class="sticker sticker-7"></div>
+            <div class="sticker sticker-8"></div>
+
+        </div>
+        <div class="exts-icons">
+            <div class="file-icon file-icon__png">
+                <span></span>
+                <p class="file-type">PNG</p>
+            </div>
+            <div class="file-icon file-icon__jpg">
+                <span></span>
+                <p class="file-type">JPG</p>
+            </div>
+            <div class="file-icon file-icon__gif">
+                <span></span>
+                <p class="file-type">GIF</p>
+            </div>
+        </div>
+        <div class="inner-wrapper">
+            <div class="head">
+                    <h2 class="page-title">Online Image Compressor</h2>
+                    <p class="page-description">
+                        This online image optimizer uses a smart combination of the best optimization and lossy compression algorithms to shrink <mark class="file-type-mark">JPEG</mark> and <mark class="file-type-mark">PNG</mark> images to the minimum possible size while keeping the required level of quality
+                    </p>
+                </div>
+                <div class="group-wrapper">
+                    <input type="file" name="file-7[]" id="file-7" class="inputfile inputfile-6" data-multiple-caption="{count} files selected" multiple />
+                    <label for="file-7"><span>Upload Images...</span> <strong>Browse</strong></label>
+                    <p class="number-of-imgs">Upload up to 20 images, Max file size 10MB.</p>
+                </div>
+        </div>
+        <div class="footer">
+            <p>Help us spread the world!</p>
+            <div class="group-wrapper social-icons">
+               <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> 
+               <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a> 
+               <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a> 
+               <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a> 
+               <a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a> 
+            </div>
+        </div>
+    </div>
+    <script>
+        /*
+	By Osvaldas Valutis, www.osvaldas.info
+	Available for use under the MIT License
+*/
+
+'use strict';
+
+;( function ( document, window, index )
+{
+	var inputs = document.querySelectorAll( '.inputfile' );
+	Array.prototype.forEach.call( inputs, function( input )
+	{
+		var label	 = input.nextElementSibling,
+			labelVal = label.innerHTML;
+
+		input.addEventListener( 'change', function( e )
+		{
+			var fileName = '';
+			if( this.files && this.files.length > 1 )
+				fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+			else
+				fileName = e.target.value.split( '\\' ).pop();
+
+			if( fileName )
+				label.querySelector( 'span' ).innerHTML = fileName;
+			else
+				label.innerHTML = labelVal;
+		});
+
+		// Firefox bug fix
+		input.addEventListener( 'focus', function(){ input.classList.add( 'has-focus' ); });
+		input.addEventListener( 'blur', function(){ input.classList.remove( 'has-focus' ); });
+	});
+}( document, window, 0 ));
+    </script>
+</body>
+</html>
