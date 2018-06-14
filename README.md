@@ -1,4 +1,4 @@
-# Front-end web development daily practise.
+# Front-end web development daily practice.
 
 I started on May 31, 2018.
 
