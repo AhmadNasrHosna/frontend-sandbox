@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Page Info -->
+    <title>File Upload</title>
+    <meta name="description" content="Front-end daily practise.">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="assets/fonts/fontawesome/css/font-awesome.min.css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i|Varela+Round" rel="stylesheet">
+
+</head>
+
+    <!--
+    • This page created on Jun 12, 2018.
+    It's a part of my Front-end web development daily practise.
+    I started on May 31, 2018.
+    I'm practising since 13 days and counting to reach my goal: 1111 days (3 years) of daily practise.
+
+    - UI design based on and inspired from: 
+    https://dribbble.com/shots/2639536-File-Upload/attachments/528752
+
+    • My Personal Website:
+    • Twitter: @ahmedhosna95
+    -->
+
+<body>
+    <div class="wrapper">
+        <div class="head">
+            <h2>Drag and Drop</h2>
+            <p>To Upload</p>
+        </div>
+        <div class="upload-processing">
+            <div class="file-progress">
+                <div class="group-wrapper">
+                    <h3 class="file__title">Electronic_Arts.png</h3>
+                    <span class="percentage-progress">65%</span>
+                </div>
+                <span class="progress-bar"><span style="width: 65%;"><strong>65%</strong></span></span>
+            </div>
+            <div class="file-progress">
+                <div class="group-wrapper">
+                    <h3 class="file__title">isometric-view.png</h3>
+                    <span class="percentage-progress">07%</span>
+                </div>
+                <span class="progress-bar"><span style="width: 07%;"><strong>07%</strong></span></span>
+            </div>
+            <div class="file-progress">
+                <div class="group-wrapper">
+                    <h3 class="file__title">Sketching-Drawing.sketch</h3>
+                    <span class="percentage-progress">00%</span>
+                </div>
+                <span class="progress-bar"><span style="width: 0%;"><strong>0%</strong></span></span>
+            </div>
+        </div>
+        <div class="browse-or-drag">
+            <div class="upload-art">
+                <div class="cloud cloud-a">
+                    <div class="rectangle">
+                        <div class="circle circle-a"></div>
+                        <div class="circle circle-b"></div>
+                        <div class="circle circle-c"></div>
+                    </div>
+                </div>
+                <div class="cloud cloud-b">
+                        <div class="input-control">
+                            <input type="file" name="file[]" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
+                            <label for="file"></label>
+                        </div>
+                    <div class="upload-button">
+                        <div class="flat-icon">
+                            <span class="pyramids display-block"></span>
+                            <span class="sun display-block"></span>
+                            <span class="clouds display-block"></span>
+                        </div>
+                    </div>
+                    <div class="stickers">
+                        <div class="sticker sticker-a">
+                            <span class="sticker-circle-outline"></span>
+                        </div>
+                        <div class="sticker sticker-b">
+                            <div class="music-key">
+                                <span class="sticker-circle-outline sticker-circle-outline-a"></span>
+                                <span class="sticker-circle-outline sticker-circle-outline-b"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="baby-circles-outline">
+                        <span class="circle-outline circle-outline-a"></span>
+                        <span class="circle-outline circle-outline-b"></span>
+                        <span class="circle-outline circle-outline-c"></span>
+                        <span class="circle-outline circle-outline-d"></span>
+                    </div>
+                    <div class="rectangle">
+                        <div class="circle circle-a"></div>
+                        <div class="circle circle-b"></div>
+                        <div class="circle circle-c"></div>
+                    </div>
+                </div>
+                <div class="cloud cloud-c">
+                    <div class="rectangle">
+                        <div class="circle circle-a"></div>
+                        <div class="circle circle-b"></div>
+                        <div class="circle circle-c"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,415 @@
+html {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Varela Round", sans-serif; }
+
+* {
+  box-sizing: inherit; }
+  *::before, *::after {
+    box-sizing: inherit; }
+
+h2 {
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 37px;
+  font-weight: 900; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
+
+.display-block {
+  display: block; }
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: #3EA9F7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff; }
+  .wrapper .head {
+    text-align: center;
+    margin-bottom: 4rem; }
+    .wrapper .head p {
+      text-transform: uppercase;
+      font-size: 17px;
+      font-weight: 100;
+      margin: .5rem 0 0 0; }
+  .wrapper .upload-processing {
+    margin: 0 auto;
+    width: 460px; }
+    .wrapper .upload-processing .file-progress {
+      margin-bottom: 1.6rem; }
+      .wrapper .upload-processing .file-progress .group-wrapper {
+        display: flex;
+        margin-bottom: .8rem; }
+        .wrapper .upload-processing .file-progress .group-wrapper .file__title {
+          font-size: 15px;
+          font-weight: 400; }
+        .wrapper .upload-processing .file-progress .group-wrapper .percentage-progress {
+          margin-left: auto;
+          padding: .2rem .35rem;
+          border-radius: 50px;
+          font-size: 11px;
+          background: rgba(255, 255, 255, 0.9);
+          color: #777; }
+      .wrapper .upload-processing .file-progress .progress-bar {
+        display: block;
+        width: 100%;
+        height: 6px;
+        background: #66c5ff;
+        border-radius: 50px; }
+        .wrapper .upload-processing .file-progress .progress-bar span {
+          display: block;
+          height: 100%;
+          background: #fff;
+          border-radius: 50px; }
+          .wrapper .upload-processing .file-progress .progress-bar span strong {
+            display: none; }
+  .wrapper .browse-or-drag {
+    position: relative;
+    margin-top: 11rem; }
+    .wrapper .browse-or-drag .upload-art {
+      display: flex;
+      justify-content: center;
+      position: relative; }
+      .wrapper .browse-or-drag .upload-art .cloud {
+        position: relative;
+        transition: all 300ms ease; }
+        .wrapper .browse-or-drag .upload-art .cloud:hover {
+          opacity: .88;
+          transform: scale(0.98); }
+        .wrapper .browse-or-drag .upload-art .cloud .rectangle {
+          width: 335px;
+          height: 110px;
+          background: #fff;
+          border-radius: 110px;
+          position: relative; }
+          .wrapper .browse-or-drag .upload-art .cloud .rectangle .circle {
+            position: absolute;
+            background: #fff;
+            border-radius: 50%; }
+            .wrapper .browse-or-drag .upload-art .cloud .rectangle .circle.circle-a {
+              width: 95px;
+              height: 95px;
+              top: -50px;
+              left: 38px; }
+            .wrapper .browse-or-drag .upload-art .cloud .rectangle .circle.circle-b {
+              width: 130px;
+              height: 125px;
+              top: -100px;
+              left: 118px; }
+            .wrapper .browse-or-drag .upload-art .cloud .rectangle .circle.circle-c {
+              width: 70px;
+              height: 70px;
+              top: -37px;
+              left: 228px; }
+        .wrapper .browse-or-drag .upload-art .cloud.cloud-a, .wrapper .browse-or-drag .upload-art .cloud.cloud-c {
+          transform: scale(0.45);
+          position: relative; }
+          .wrapper .browse-or-drag .upload-art .cloud.cloud-a .rectangle, .wrapper .browse-or-drag .upload-art .cloud.cloud-c .rectangle {
+            background: #66c5ff; }
+            .wrapper .browse-or-drag .upload-art .cloud.cloud-a .rectangle .circle, .wrapper .browse-or-drag .upload-art .cloud.cloud-c .rectangle .circle {
+              background: #66c5ff; }
+        .wrapper .browse-or-drag .upload-art .cloud.cloud-a {
+          top: -56px;
+          left: 207px; }
+        .wrapper .browse-or-drag .upload-art .cloud.cloud-c {
+          z-index: -1;
+          top: -21px;
+          right: 205px; }
+        .wrapper .browse-or-drag .upload-art .cloud.cloud-b {
+          cursor: pointer; }
+          .wrapper .browse-or-drag .upload-art .cloud.cloud-b .input-control {
+            position: absolute;
+            z-index: 100;
+            width: 100%;
+            height: 100%; }
+            .wrapper .browse-or-drag .upload-art .cloud.cloud-b .input-control .inputfile {
+              width: 0.1px;
+              height: 0.1px;
+              opacity: 0;
+              overflow: hidden;
+              position: absolute;
+              z-index: -1; }
+            .wrapper .browse-or-drag .upload-art .cloud.cloud-b .input-control .inputfile + label {
+              width: 125%;
+              height: 193%;
+              display: block;
+              position: relative;
+              top: -101px;
+              left: -40px;
+              cursor: pointer; }
+            .wrapper .browse-or-drag .upload-art .cloud.cloud-b .input-control .inputfile + label {
+              color: #333;
+              -webkit-user-select: none;
+              z-index: 100; }
+          .wrapper .browse-or-drag .upload-art .cloud.cloud-b .upload-button {
+            width: 95px;
+            height: 95px;
+            border: 2px dashed #88dbff;
+            border-radius: 4px;
+            position: absolute;
+            z-index: 20;
+            top: 37px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center; }
+            .wrapper .browse-or-drag .upload-art .cloud.cloud-b .upload-button .flat-icon {
+              width: 63px;
+              height: 63px;
+              background: #a1e0ff;
+              border-radius: 6px;
+              overflow: hidden;
+              position: relative; }
+              .wrapper .browse-or-drag .upload-art .cloud.cloud-b .upload-button .flat-icon .pyramids {
+                width: 33px;
+                height: 33px;
+                background: #90af20;
+                position: relative;
+                top: 45px;
+                left: 35px;
+                transform: rotate(45deg); }
+                .wrapper .browse-or-drag .upload-art .cloud.cloud-b .upload-button .flat-icon .pyramids:before {
+                  content: "";
+                  display: block;
+                  width: 60px;
+                  height: 60px;
+                  background: #6e9306;
+                  top: 19px;
+                  left: -34px;
+                  transform: rotate(0deg);
+                  position: absolute; }
+              .wrapper .browse-or-drag .upload-art .cloud.cloud-b .upload-button .flat-icon .sun {
+                width: 19px;
+                height: 19px;
+                background: #ffaa00;
+                border-radius: 50%;
+                position: absolute;
+                top: 9px;
+                right: 12px;
+                z-index: 5; }
+              .wrapper .browse-or-drag .upload-art .cloud.cloud-b .upload-button .flat-icon .clouds {
+                width: 33px;
+                height: 10px;
+                background: #fff;
+                border-radius: 50px;
+                position: absolute;
+                top: 15px;
+                right: 7px; }
+                .wrapper .browse-or-drag .upload-art .cloud.cloud-b .upload-button .flat-icon .clouds::before {
+                  content: "";
+                  display: block;
+                  width: 33px;
+                  height: 9px;
+                  background: #fff;
+                  border-radius: 50px;
+                  position: absolute;
+                  top: -8px;
+                  right: 13px; }
+          .wrapper .browse-or-drag .upload-art .cloud.cloud-b .stickers {
+            position: relative; }
+            .wrapper .browse-or-drag .upload-art .cloud.cloud-b .stickers .sticker {
+              position: absolute;
+              width: 35px;
+              height: 35px;
+              border: 2px solid #88dbff;
+              border-radius: 4px; }
+              .wrapper .browse-or-drag .upload-art .cloud.cloud-b .stickers .sticker.sticker-a {
+                top: -109px;
+                left: 78px;
+                transform: scale(0.78) rotate(-26deg); }
+                .wrapper .browse-or-drag .upload-art .cloud.cloud-b .stickers .sticker.sticker-a .sticker-circle-outline {
+                  display: block;
+                  border: 2px solid #88dbff;
+                  border-radius: 50%;
+                  position: relative;
+                  width: 9px;
+                  height: 9px;
+                  top: 3px;
+                  left: 19px; }
+                  .wrapper .browse-or-drag .upload-art .cloud.cloud-b .stickers .sticker.sticker-a .sticker-circle-outline::before, .wrapper .browse-or-drag .upload-art .cloud.cloud-b .stickers .sticker.sticker-a .sticker-circle-outline::after {
+                    content: "";
+                    display: block;
+                    border-top: 2px solid #88dbff;
+                    border-left: 2px solid #88dbff;
+                    transform: rotate(45deg);
+                    position: relative; }
+                  .wrapper .browse-or-drag .upload-art .cloud.cloud-b .stickers .sticker.sticker-a .sticker-circle-outline::before {
+                    top: 12px;
+                    left: -12px;
+                    width: 17px;
+                    height: 17px; }
+                  .wrapper .browse-or-drag .upload-art .cloud.cloud-b .stickers .sticker.sticker-a .sticker-circle-outline::after {
+                    width: 6px;
+                    height: 9px;
+                    top: -7px;
+                    left: -15px; }
+              .wrapper .browse-or-drag .upload-art .cloud.cloud-b .stickers .sticker.sticker-b {
+                top: -89px;
+                left: 252px;
+                transform: scale(0.78) rotate(26deg); }
+                .wrapper .browse-or-drag .upload-art .cloud.cloud-b .stickers .sticker.sticker-b .music-key {
+                  position: relative;
+                  top: 2px;
+                  left: -1px;
+                  transform: scale(0.9); }
+                  .wrapper .browse-or-drag .upload-art .cloud.cloud-b .stickers .sticker.sticker-b .music-key .sticker-circle-outline {
+                    display: block;
+                    border: 2px solid #88dbff;
+                    border-radius: 50%;
+                    position: relative;
+                    width: 9px;
+                    height: 9px; }
+                    .wrapper .browse-or-drag .upload-art .cloud.cloud-b .stickers .sticker.sticker-b .music-key .sticker-circle-outline.sticker-circle-outline-a {
+                      top: 13px;
+                      left: 18px; }
+                      .wrapper .browse-or-drag .upload-art .cloud.cloud-b .stickers .sticker.sticker-b .music-key .sticker-circle-outline.sticker-circle-outline-a::before {
+                        content: "";
+                        display: block;
+                        width: 2px;
+                        height: 14px;
+                        background: #88dbff;
+                        position: absolute;
+                        top: -12px;
+                        left: 5px; }
+                      .wrapper .browse-or-drag .upload-art .cloud.cloud-b .stickers .sticker.sticker-b .music-key .sticker-circle-outline.sticker-circle-outline-a::after {
+                        content: "";
+                        display: block;
+                        width: 15px;
+                        height: 2px;
+                        background: #88dbff;
+                        position: absolute;
+                        top: -11px;
+                        right: -2px;
+                        transform: rotate(-18deg); }
+                    .wrapper .browse-or-drag .upload-art .cloud.cloud-b .stickers .sticker.sticker-b .music-key .sticker-circle-outline.sticker-circle-outline-b {
+                      top: 9px;
+                      left: 5px; }
+                      .wrapper .browse-or-drag .upload-art .cloud.cloud-b .stickers .sticker.sticker-b .music-key .sticker-circle-outline.sticker-circle-outline-b::before {
+                        content: "";
+                        display: block;
+                        width: 2px;
+                        height: 14px;
+                        background: #88dbff;
+                        position: absolute;
+                        top: -12px;
+                        right: -2px; }
+          .wrapper .browse-or-drag .upload-art .cloud.cloud-b .baby-circles-outline {
+            position: relative; }
+            .wrapper .browse-or-drag .upload-art .cloud.cloud-b .baby-circles-outline .circle-outline {
+              display: block;
+              border: 2px solid #88dbff;
+              border-radius: 50%;
+              position: absolute; }
+              .wrapper .browse-or-drag .upload-art .cloud.cloud-b .baby-circles-outline .circle-outline.circle-outline-a {
+                width: 9px;
+                height: 9px;
+                top: -85px;
+                left: 10px; }
+              .wrapper .browse-or-drag .upload-art .cloud.cloud-b .baby-circles-outline .circle-outline.circle-outline-b {
+                width: 9px;
+                height: 9px;
+                top: 32px;
+                left: -29px; }
+              .wrapper .browse-or-drag .upload-art .cloud.cloud-b .baby-circles-outline .circle-outline.circle-outline-c {
+                width: 11px;
+                height: 11px;
+                top: 62px;
+                left: 389px; }
+              .wrapper .browse-or-drag .upload-art .cloud.cloud-b .baby-circles-outline .circle-outline.circle-outline-d {
+                width: 15px;
+                height: 15px;
+                top: 105px;
+                left: 347px; }
+          .wrapper .browse-or-drag .upload-art .cloud.cloud-b .rectangle .circle.circle-a::after {
+            content: "";
+            display: block;
+            width: 120px;
+            height: 120px;
+            background: transparent;
+            border-radius: 50%;
+            border: 4px solid transparent;
+            border-right-color: #88dbff;
+            position: relative;
+            top: -18px;
+            left: 186px;
+            transform: rotate(29deg);
+            z-index: 10; }
+          .wrapper .browse-or-drag .upload-art .cloud.cloud-b .rectangle .circle.circle-a::before {
+            content: "";
+            display: block;
+            width: 65px;
+            height: 65px;
+            background: transparent;
+            border-radius: 50%;
+            border: 4px solid transparent;
+            border-left-color: #d2f3ff;
+            position: relative;
+            top: 17px;
+            left: 16px;
+            transform: rotate(40deg); }
+          .wrapper .browse-or-drag .upload-art .cloud.cloud-b .rectangle .circle.circle-b::before {
+            content: "";
+            display: block;
+            width: 90px;
+            height: 80px;
+            background: transparent;
+            border-radius: 50%;
+            border: 4px solid transparent;
+            border-right-color: #d2f3ff;
+            position: relative;
+            top: 23px;
+            left: 22px;
+            transform: rotate(-45deg); }
+          .wrapper .browse-or-drag .upload-art .cloud.cloud-b .rectangle .circle.circle-b::after {
+            content: "";
+            display: block;
+            width: 81px;
+            height: 100px;
+            background: transparent;
+            border-radius: 50%;
+            border: 4px solid transparent;
+            border-left-color: #88dbff;
+            position: relative;
+            top: 13px;
+            left: -125px;
+            transform: rotate(29deg);
+            z-index: 10; }
+          .wrapper .browse-or-drag .upload-art .cloud.cloud-b .rectangle .circle.circle-c::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 60px;
+            background: transparent;
+            border-radius: 50%;
+            border: 4px solid transparent;
+            border-right-color: #d2f3ff;
+            position: relative;
+            top: -18px;
+            left: 30px;
+            transform: rotate(-39deg); }
+          .wrapper .browse-or-drag .upload-art .cloud.cloud-b .rectangle .circle.circle-c::before {
+            content: "";
+            display: block;
+            width: 75px;
+            height: 75px;
+            background: transparent;
+            border-radius: 50%;
+            border: 4px solid transparent;
+            border-right-color: #88dbff;
+            position: relative;
+            top: -8px;
+            left: 3px;
+            transform: rotate(-47deg); }
+
+/*# sourceMappingURL=style.css.map */
