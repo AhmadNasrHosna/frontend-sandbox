@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Page Info -->
+    <title>File Upload</title>
+    <meta name="description" content="Front-end daily practise.">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Font Icons -->
+    <link rel="stylesheet" href="assets/fonts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicicons/css/ionicicons.css" >
+
+    <!-- Google Fronts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i|Varela+Round" rel="stylesheet">
+
+</head>
+    <!--
+    • This page created on Jun 0, 2018.
+    It's a part of my Front-end web development daily practise.
+    I started on May 31, 2018.
+    I'm practising since 13 days and counting to reach my goal: 1111 days (3 years) of daily practise.
+
+    - UI design based on and inspired from: 
+    https://dribbble.com/shots/2639536-File-Upload/attachments/528752
+
+    • My Personal Website:
+    • Twitter: @ahmedhosna95
+    -->
+
+<body>
+    
+    <div id="topModal" class="wrapper-a">
+        <div class="modal-head">
+            <div class="container">
+                <h2>File Upload</h2>
+                <div id="closeModal" class="close-modal">
+                    <i class="x-icon">
+                        <span></span>
+                    </i>
+                </div>
+            </div>
+        </div>
+        <div class="inner-wrapper">
+            <!-- Drag or Browse Block Area -->
+            <div class="drag-or-browse">
+                <div class="input-control">
+                    <input type="file" name="file[]" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
+                    <label for="file">
+                            <i class="ion ion-ios-cloud-upload-outline"></i>
+                            <span>Drop files here to upload or <u>choose file</u></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <footer class="modal-footer">
+            <button class="btn attach-btn btn-lg">
+                Attach Files <i class="ion ion-ios-attach-outline"></i>
+            </button>
+            <button class="btn btn-default-outline btn-disabled btn-lg">
+                Discard
+            </button>
+        </footer>
+    </div>
+    
+
+    <div class="wrapper-b">
+        <div class="modal-head">
+            <div class="container">
+                <h2>File Upload</h2>
+                <div class="close-modal">
+                    <i class="x-icon">
+                        <span></span>
+                    </i>
+                </div>
+            </div>
+        </div>
+        <div class="inner-wrapper">
+            <!-- Upload Processing -->
+            <div class="upload-processing">
+    
+                <div class="file-progress">
+                    <div class="file__icon">
+                        <span class="dis-block"></span>
+                        <p class="file__type">.png</p>
+                    </div>
+                    <div class="file__data">
+                        <div class="group-wrapper">
+                            <h3 class="file__title">frame-generic.png</h3>
+                            <div class="cancle-upload">
+                                <i class="x-icon">
+                                    <span></span>
+                                </i>
+                            </div>
+                        </div>
+                        <span class="progress-bar"><span style="width: 65%;"></span></span>
+                        <p class="upload-details">
+                            <span class="file__size">203.5KB of 1.254MB</span>
+                            <span class="percentage-progress">(65% done)</span>
+                            <span class="speed">870kb/sec</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="file-progress file-progress-succeed">
+                    <div class="file__icon">
+                        <span></span>
+                        <p class="file__type">.JPG</p>
+                    </div>
+                    <div class="file__data">
+                        <div class="group-wrapper">
+                            <h3 class="file__title">frame-generic.png</h3>
+                            <div class="cancle-upload">
+                                <i class="x-icon">
+                                    <span></span>
+                                </i>
+                            </div>
+                            <div class="file__options">
+                                    <i class="ion ion-md-create"></i>
+                                    <i class="toggle-1 ion ion-ios-trash-outline"></i>
+                                <div class="dropdown-modal dropdown-modal-1">
+                                    <p>Do you want to remove the file?</p>
+                                    <div class="group-wrapper">
+                                        <button id="cancleButton" class="btn btn-default-outline btn-sm">Cancel</button>
+                                        <button class="btn btn-danger btn-sm">Remove</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="progress-bar"><span style="width: 100%;"></span></span>
+                        <p class="upload-details">
+                            <span class="file__size">203.5KB of 1.254MB</span>
+                            <span class="percentage-progress">(Your file has been successfully uploaded!)</span>
+                            <span class="speed">870kb/sec</span>
+                        </p>
+                    </div>
+                    
+                </div>
+                <div id="fileProgress" class="file-progress file-progress-succeed">
+                    <div class="file__icon">
+                        <span></span>
+                        <p class="file__type">.PSD</p>
+                    </div>
+                    <div class="file__data">
+                        <div class="group-wrapper">
+                            <h3 class="file__title">frame-generic.png</h3>
+                            <div class="cancle-upload">
+                                <i class="x-icon">
+                                    <span></span>
+                                </i>
+                            </div>
+                            <div class="file__options">
+                                <i class="ion ion-md-create"></i>
+                                <i class="toggle-2 ion ion-ios-trash-outline"></i>
+                                <div class="dropdown-modal dropdown-modal-2">
+                                    <p>Do you want to remove the file?</p>
+                                    <div class="group-wrapper">
+                                        <button id="cancleButton" class="btn btn-default-outline btn-sm">Cancel</button>
+                                        <button id="removeButton" class="btn btn-danger btn-sm">Remove</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="progress-bar"><span style="width: 100%;"></span></span>
+                        <p class="upload-details">
+                            <span class="file__size">203.5KB of 1.254MB</span>
+                            <span class="percentage-progress">(Your file has been successfully uploaded!)</span>
+                            <span class="speed">870kb/sec</span>
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- Drag or Browse Block Area -->
+            <div class="drag-or-browse">
+                <div class="input-control">
+                    <input type="file" name="file[]" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
+                    <label for="file">
+                            <i class="ion ion-ios-cloud-upload-outline"></i>
+                            <span>Drop files here to upload or <u>choose file</u></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <footer class="modal-footer">
+            <button class="btn attach-btn btn-lg">
+                Attach Files <i class="ion ion-ios-attach-outline"></i>
+            </button>
+            <button class="btn btn-danger-outline btn-lg">
+                Discard
+            </button>
+        </footer>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+</html>

@@ -1,0 +1,413 @@
+html {
+  box-sizing: border-box; }
+
+/*
+html, body {
+    width: 100%; height: 100%;
+}*/
+body {
+  background: #bae5e9;
+  color: #646a6b;
+  margin: 3rem 0;
+  font-family: "Nunito Sans", sans-serif; }
+
+* {
+  box-sizing: inherit; }
+  *::before, *::after {
+    box-sizing: inherit; }
+
+h2 {
+  color: #2f3232;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 27px;
+  font-weight: 600; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1; }
+
+.inputfile + label {
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .inputfile + label span {
+    width: 190px; }
+  .inputfile + label i {
+    margin-bottom: .6rem;
+    font-size: 18px;
+    font-weight: 600; }
+
+.inputfile + label {
+  color: #17adbc;
+  -webkit-user-select: none; }
+
+.dis-block {
+  display: block; }
+  @media (max-width: 767px) {
+    .dis-block.dis-block-sm {
+      display: block; } }
+
+button {
+  border: 0;
+  padding: 0;
+  margin: 0; }
+
+.btn {
+  background: #0066cc;
+  color: #fff;
+  border-radius: 3px;
+  transition: all 300ms ease;
+  cursor: pointer; }
+  .btn:hover {
+    background: #0070e0; }
+  .btn:active {
+    position: relative;
+    top: 1px;
+    left: 1px;
+    transform: scale(0.98); }
+  .btn:focus {
+    outline: 1px dotted #0066cc; }
+  .btn.btn-sm {
+    padding: .5rem 1.4rem !important;
+    font-size: 13px !important; }
+  .btn.btn-lg {
+    padding: .7rem 1.7rem !important; }
+  .btn.btn-disabled {
+    cursor: not-allowed; }
+    .btn.btn-disabled:active {
+      position: relative;
+      top: 0px;
+      left: 0px;
+      transform: scale(1); }
+    .btn.btn-disabled:focus {
+      outline: 1px dotted #abb9ba !important; }
+  .btn.btn-default-outline {
+    background: transparent;
+    color: #abb9ba;
+    border: 1px solid #dde4e8; }
+    .btn.btn-default-outline:focus {
+      outline: 1px dotted #abb9ba !important; }
+  .btn.btn-danger {
+    background: #f97f6f;
+    color: #fff; }
+    .btn.btn-danger:hover {
+      background: #fa9083; }
+    .btn.btn-danger:focus {
+      outline: 1px dotted #f97f6f !important; }
+  .btn.btn-danger-outline {
+    background: transparent;
+    color: #f97f6f;
+    border: 1px solid #f97f6f; }
+    .btn.btn-danger-outline:focus {
+      outline: 1px dotted #f97f6f !important; }
+  .btn.btn {
+    font-weight: 600;
+    padding: .3rem 1.3rem; }
+    @media (min-width: 0px) {
+      .btn.btn {
+        font-size: 14px; } }
+    @media (min-width: 0px) {
+      .btn.btn {
+        font-size: 14px; } }
+    @media (min-width: 0px) {
+      .btn.btn {
+        font-size: 14px; } }
+    @media (min-width: 0px) {
+      .btn.btn {
+        font-size: 14px; } }
+    .btn.btn:focus {
+      outline: 1px dotted #17adbc; }
+  .btn.attach-btn {
+    background: #17adbc;
+    color: rgba(255, 255, 255, 0.95);
+    position: relative;
+    padding-right: 2.8rem !important; }
+    .btn.attach-btn i {
+      font-size: 20px;
+      position: absolute;
+      right: 1.7rem;
+      top: 27%;
+      transform: rotate(45deg); }
+    .btn.attach-btn:hover {
+      background: #19bece; }
+
+.wrapper-a, .wrapper-b {
+  width: 700px;
+  min-height: 550px;
+  margin: auto;
+  box-shadow: 0 5px 18px -3px rgba(0, 0, 0, 0.14);
+  background: #fff;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column; }
+  .wrapper-a:not(:last-child), .wrapper-b:not(:last-child) {
+    margin-bottom: 3rem; }
+  .wrapper-a .modal-head .container, .wrapper-b .modal-head .container {
+    border-bottom: 1px solid #e1e8eb;
+    padding: 1.7rem 0 1.4rem;
+    margin: 0 2.8rem;
+    display: flex;
+    align-items: center; }
+    .wrapper-a .modal-head .container .close-modal, .wrapper-b .modal-head .container .close-modal {
+      margin-left: auto;
+      width: 37px;
+      height: 37px;
+      border: 1px solid #e1e8eb;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer; }
+      .wrapper-a .modal-head .container .close-modal .x-icon, .wrapper-b .modal-head .container .close-modal .x-icon {
+        transition: all 300ms ease; }
+        .wrapper-a .modal-head .container .close-modal .x-icon span, .wrapper-b .modal-head .container .close-modal .x-icon span {
+          display: block;
+          width: 1px;
+          height: 11px;
+          background: #a9b5b7;
+          transform: rotate(45deg); }
+          .wrapper-a .modal-head .container .close-modal .x-icon span::before, .wrapper-b .modal-head .container .close-modal .x-icon span::before {
+            content: "";
+            display: block;
+            width: 1px;
+            height: 11px;
+            background: #a9b5b7;
+            transform: rotate(90deg); }
+      .wrapper-a .modal-head .container .close-modal:hover .x-icon, .wrapper-b .modal-head .container .close-modal:hover .x-icon {
+        transform: rotate(180deg); }
+  .wrapper-a .inner-wrapper, .wrapper-b .inner-wrapper {
+    padding: 1.5rem 2.8rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column; }
+    .wrapper-a .inner-wrapper .drag-or-browse, .wrapper-b .inner-wrapper .drag-or-browse {
+      flex: 1;
+      background: linear-gradient(90deg, #17adbc 50%, transparent 0%), linear-gradient(0deg, #17adbc 50%, transparent 0%), linear-gradient(90deg, #17adbc 50%, transparent 0%), linear-gradient(0deg, #17adbc 50%, transparent 0%);
+      background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
+      background-size: 16px 1px, 1px 16px, 16px 1px, 1px 16px;
+      background-position: left top, right top, left bottom, left top;
+      display: inherit; }
+      .wrapper-a .inner-wrapper .drag-or-browse .input-control, .wrapper-b .inner-wrapper .drag-or-browse .input-control {
+        width: 100%;
+        min-height: 100%; }
+  .wrapper-a .modal-footer, .wrapper-b .modal-footer {
+    background: #f7fafa;
+    padding: 1.5rem 2.8rem;
+    border-top: 1px solid #e1e8eb;
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 0 0 5px 5px; }
+    .wrapper-a .modal-footer .attach-btn, .wrapper-b .modal-footer .attach-btn {
+      order: 2;
+      margin-left: .7rem; }
+    .wrapper-a .modal-footer .discard-btn, .wrapper-b .modal-footer .discard-btn {
+      order: 1; }
+
+.wrapper-b .inner-wrapper .upload-processing {
+  margin-bottom: 1.5rem; }
+  .wrapper-b .inner-wrapper .upload-processing .file-progress {
+    border: 1px solid #e1e8eb;
+    border-bottom: 2px solid rgba(225, 232, 235, 0.8);
+    border-radius: 3px;
+    padding: .9rem 1.5rem;
+    display: flex; }
+    .wrapper-b .inner-wrapper .upload-processing .file-progress:not(:last-child) {
+      margin-bottom: .5rem; }
+    .wrapper-b .inner-wrapper .upload-processing .file-progress .file__icon {
+      margin-right: 1.5rem;
+      width: 26px;
+      height: 34px;
+      border: 1px solid #acb9ba;
+      border-radius: 2px;
+      position: relative; }
+      .wrapper-b .inner-wrapper .upload-processing .file-progress .file__icon span {
+        width: 12px;
+        height: 11px;
+        border: 1px solid #acb9ba;
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        border-radius: 0 0 3px 0; }
+        .wrapper-b .inner-wrapper .upload-processing .file-progress .file__icon span::before, .wrapper-b .inner-wrapper .upload-processing .file-progress .file__icon span::after {
+          content: "";
+          display: block;
+          width: 0;
+          height: 0; }
+        .wrapper-b .inner-wrapper .upload-processing .file-progress .file__icon span::before {
+          border-left: 12px solid rgba(172, 185, 186, 0.8);
+          border-bottom: 12px solid transparent;
+          position: absolute;
+          top: -1px;
+          left: -1px; }
+        .wrapper-b .inner-wrapper .upload-processing .file-progress .file__icon span::after {
+          border-left: 12px solid #fff;
+          border-bottom: 12px solid transparent;
+          position: absolute;
+          top: -1.5px;
+          left: -2px; }
+      .wrapper-b .inner-wrapper .upload-processing .file-progress .file__icon .file__type {
+        position: absolute;
+        top: 9px;
+        left: 9px;
+        -webkit-user-select: none;
+        text-transform: uppercase;
+        font-size: 7px;
+        font-weight: 400;
+        font-family: 'Segoe UI', sans-serif;
+        background: #17adbc;
+        color: #fff;
+        border-radius: 1px;
+        padding: .15rem .22rem .19rem; }
+    .wrapper-b .inner-wrapper .upload-processing .file-progress .file__data {
+      flex: 1; }
+      .wrapper-b .inner-wrapper .upload-processing .file-progress .file__data .group-wrapper {
+        display: flex;
+        margin-bottom: .7rem; }
+        .wrapper-b .inner-wrapper .upload-processing .file-progress .file__data .group-wrapper .file__title {
+          font-size: 15px;
+          font-weight: 600; }
+        .wrapper-b .inner-wrapper .upload-processing .file-progress .file__data .group-wrapper .cancle-upload {
+          margin-left: auto;
+          width: 17px;
+          height: 17px;
+          background: #e1e8eb;
+          border: 1px solid transparent;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: all 300ms ease; }
+          .wrapper-b .inner-wrapper .upload-processing .file-progress .file__data .group-wrapper .cancle-upload:hover {
+            background: transparent;
+            border: 1px solid #e1e8eb; }
+          .wrapper-b .inner-wrapper .upload-processing .file-progress .file__data .group-wrapper .cancle-upload .x-icon span {
+            display: block;
+            width: 1px;
+            height: 11px;
+            background: #a8b4b6;
+            transform: rotate(45deg); }
+            .wrapper-b .inner-wrapper .upload-processing .file-progress .file__data .group-wrapper .cancle-upload .x-icon span::before {
+              content: "";
+              display: block;
+              width: 1px;
+              height: 11px;
+              background: #a8b4b6;
+              transform: rotate(90deg); }
+      .wrapper-b .inner-wrapper .upload-processing .file-progress .file__data .progress-bar {
+        display: block;
+        width: 100%;
+        height: 4px;
+        background: #e1e8eb;
+        border-radius: 50px; }
+        .wrapper-b .inner-wrapper .upload-processing .file-progress .file__data .progress-bar span {
+          display: block;
+          height: 100%;
+          background: #17adbc;
+          border-radius: 50px; }
+      .wrapper-b .inner-wrapper .upload-processing .file-progress .file__data .upload-details {
+        margin: .6rem 0 0 0;
+        display: flex;
+        font-size: 13px; }
+        .wrapper-b .inner-wrapper .upload-processing .file-progress .file__data .upload-details .file__size, .wrapper-b .inner-wrapper .upload-processing .file-progress .file__data .upload-details .percentage-progress {
+          font-style: italic; }
+          .wrapper-b .inner-wrapper .upload-processing .file-progress .file__data .upload-details .file__size:not(:last-child), .wrapper-b .inner-wrapper .upload-processing .file-progress .file__data .upload-details .percentage-progress:not(:last-child) {
+            margin-right: .7rem; }
+        .wrapper-b .inner-wrapper .upload-processing .file-progress .file__data .upload-details .speed {
+          margin-left: auto;
+          font-size: 12px; }
+    .wrapper-b .inner-wrapper .upload-processing .file-progress.file-progress-succeed {
+      cursor: pointer; }
+      .wrapper-b .inner-wrapper .upload-processing .file-progress.file-progress-succeed .file__data {
+        position: relative; }
+        .wrapper-b .inner-wrapper .upload-processing .file-progress.file-progress-succeed .file__data .cancle-upload {
+          display: none; }
+        .wrapper-b .inner-wrapper .upload-processing .file-progress.file-progress-succeed .file__data .file__options {
+          margin-left: auto;
+          display: inline-flex; }
+          .wrapper-b .inner-wrapper .upload-processing .file-progress.file-progress-succeed .file__data .file__options i {
+            font-size: 19px;
+            color: #a3b0b2;
+            cursor: pointer;
+            margin-left: 0.7rem;
+            transition: all 200ms ease; }
+            .wrapper-b .inner-wrapper .upload-processing .file-progress.file-progress-succeed .file__data .file__options i:hover {
+              color: #bfc8c9; }
+            .wrapper-b .inner-wrapper .upload-processing .file-progress.file-progress-succeed .file__data .file__options i:active {
+              position: relative;
+              top: 1px;
+              left: 1px; }
+          .wrapper-b .inner-wrapper .upload-processing .file-progress.file-progress-succeed .file__data .file__options .dropdown-modal {
+            background: #fff;
+            border: 1px solid #e1e8eb;
+            border-radius: 3px;
+            padding: 1.3rem 2.5rem;
+            position: absolute;
+            z-index: 10;
+            box-shadow: 0 3px 9px -3px rgba(0, 0, 0, 0.15);
+            display: none; }
+            .wrapper-b .inner-wrapper .upload-processing .file-progress.file-progress-succeed .file__data .file__options .dropdown-modal::before, .wrapper-b .inner-wrapper .upload-processing .file-progress.file-progress-succeed .file__data .file__options .dropdown-modal::after {
+              content: "";
+              display: block;
+              width: 0;
+              height: 0;
+              border-right: 6px solid transparent;
+              border-left: 6px solid transparent;
+              position: absolute; }
+            .wrapper-b .inner-wrapper .upload-processing .file-progress.file-progress-succeed .file__data .file__options .dropdown-modal::before {
+              top: -9px;
+              right: 91px;
+              border-bottom: 8px solid #d5dfe3; }
+            .wrapper-b .inner-wrapper .upload-processing .file-progress.file-progress-succeed .file__data .file__options .dropdown-modal::after {
+              top: -7px;
+              right: 91px;
+              border-bottom: 8px solid #fff; }
+            .wrapper-b .inner-wrapper .upload-processing .file-progress.file-progress-succeed .file__data .file__options .dropdown-modal.dropdown-modal-1 {
+              top: 31px;
+              right: -93px; }
+            .wrapper-b .inner-wrapper .upload-processing .file-progress.file-progress-succeed .file__data .file__options .dropdown-modal.dropdown-modal-2 {
+              top: 31px;
+              right: -93px; }
+            .wrapper-b .inner-wrapper .upload-processing .file-progress.file-progress-succeed .file__data .file__options .dropdown-modal p {
+              margin: 0 0 1rem 0;
+              color: #2f3232;
+              font-size: 14px;
+              font-weight: 600; }
+            .wrapper-b .inner-wrapper .upload-processing .file-progress.file-progress-succeed .file__data .file__options .dropdown-modal .group-wrapper {
+              margin: 0; }
+              .wrapper-b .inner-wrapper .upload-processing .file-progress.file-progress-succeed .file__data .file__options .dropdown-modal .group-wrapper button {
+                flex-grow: 1; }
+                .wrapper-b .inner-wrapper .upload-processing .file-progress.file-progress-succeed .file__data .file__options .dropdown-modal .group-wrapper button:not(:last-child) {
+                  margin-right: 1rem; }
+        .wrapper-b .inner-wrapper .upload-processing .file-progress.file-progress-succeed .file__data .progress-bar {
+          display: none; }
+        .wrapper-b .inner-wrapper .upload-processing .file-progress.file-progress-succeed .file__data .upload-details .file__size, .wrapper-b .inner-wrapper .upload-processing .file-progress.file-progress-succeed .file__data .upload-details .speed {
+          display: none; }
+.wrapper-b .inner-wrapper .drag-or-browse {
+  display: inherit; }
+  .wrapper-b .inner-wrapper .drag-or-browse .input-control .inputfile + label {
+    flex-direction: row;
+    padding: 1.7rem 0; }
+    .wrapper-b .inner-wrapper .drag-or-browse .input-control .inputfile + label span {
+      width: auto; }
+    .wrapper-b .inner-wrapper .drag-or-browse .input-control .inputfile + label i {
+      margin-right: .7rem;
+      margin-bottom: 0; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,565 @@
+// Colors 
+$solidColor: #17adbc;
+$textDark: #2f3232;
+$borderColor: #e1e8eb;
+$textColor: #646a6b;
+
+// Fonts
+$primaryFont: 'Nunito Sans', sans-serif;
+$secondaryFont: 'Varela Round', sans-serif;
+
+
+html {
+    box-sizing: border-box;
+}
+/*
+html, body {
+    width: 100%; height: 100%;
+}*/
+body {
+    // background: linear-gradient(to top, #eef7ff, #fff );
+    // background-attachment: fixed;
+    background: #bae5e9;
+    color: $textColor;
+    margin: 3rem 0;
+    font: {
+        family: $primaryFont;
+    }
+}
+
+* {
+    box-sizing: inherit;
+    &::before, &::after {
+        box-sizing: inherit;
+    }
+    // Outline testing 
+    // outline: 1px dotted black;
+}
+
+// Global Styling 
+
+h2 {
+    color: $textDark;
+    font: {
+        family: $primaryFont;
+        size: 27px;
+        weight: 600;
+    }
+}
+
+
+// Global Reset
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+}
+
+
+// Input File
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile + label {
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    span {
+        width: 190px;
+    }
+    i {
+        //margin-right: .7rem;
+        margin-bottom: .6rem;
+        font-size: 18px;
+        font-weight: 600;
+    }
+}
+
+.inputfile + label {
+    color: $solidColor;
+    -webkit-user-select: none;
+}
+
+
+// ===== Framwork! =====================
+
+// Colors
+$mainColor: #0066cc;
+
+// Fonts
+$mainFont: 'Segoe UI', sans-serif;
+
+// Classes
+
+.dis-block {
+    display: block;
+    &.dis-block-sm {
+        @media (max-width: 767px) {
+            display: block;
+        }
+    } 
+}
+
+// Buttons 
+
+// Default Button Reset
+button {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+// Default Customisation
+.btn { 
+    background: $mainColor;
+    color: #fff;
+    border-radius: 3px;
+    transition: all 300ms ease;
+    cursor: pointer;
+    &:hover {
+        background: lighten($mainColor, 4);
+    }
+    &:active {
+        position: relative; top: 1px; left: 1px;
+        transform: scale(.98);
+    }
+    &:focus {
+        outline: 1px dotted $mainColor;
+    }
+
+    // == Context Customisation ==
+
+    // Button Dimensions
+    &.btn-sm { // Small
+        padding: .5rem 1.4rem !important;
+        font-size: 13px !important;
+    }
+    &.btn-lg { // Large
+        padding: .7rem 1.7rem !important;
+    }
+
+    // Disabled
+    &.btn-disabled {
+        cursor: not-allowed;
+        &:active {
+            position: relative; top: 0px; left: 0px;
+            transform: scale(1);
+        }
+        &:focus {
+            outline: 1px dotted #abb9ba !important;
+        }
+    }
+
+    &.btn-default-outline {
+        background: transparent;
+        color: #abb9ba;
+        border: 1px solid #dde4e8;
+        &:focus {
+            outline: 1px dotted #abb9ba !important;
+        }
+    }
+    
+    &.btn-danger {
+        background: #f97f6f;
+        color: #fff;
+        &:hover {
+            background: lighten(#f97f6f, 4);
+        }
+        &:focus {
+            outline: 1px dotted #f97f6f !important;
+        }
+    }
+
+    &.btn-danger-outline {
+        background: transparent;
+        color: #f97f6f;
+        border: 1px solid #f97f6f;
+        &:focus {
+            outline: 1px dotted #f97f6f !important;
+        }
+    }
+
+    // == Page Buttons Customisation ==
+
+    &.btn {
+        font-weight: 600;
+        padding: .3rem 1.3rem;
+
+        @media (min-width: 0px) { // All Screeens
+            font-size: 14px;
+        }
+        @media (min-width: 0px) { // Mobiles
+            font-size: 14px;
+        }
+        @media (min-width: 0px) { // Medium Screens
+            font-size: 14px;
+        }
+        @media (min-width: 0px) { // Larg Screens
+            font-size: 14px;
+        }
+        &:focus {
+            outline: 1px dotted $solidColor;
+        }
+    }
+
+    // .btn-with-icon {}
+
+    &.attach-btn {
+        background: $solidColor;
+        color: rgba(#fff, .95);
+        position: relative;
+        padding-right: 2.8rem !important;
+        i {
+            font-size: 20px;
+            position: absolute;
+            right: 1.7rem;
+            top: 27%;
+            transform: rotate(45deg);
+        }
+        &:hover {
+            background: lighten($solidColor, 4);
+        }
+    }
+}
+
+// Main Style =================
+
+.wrapper-a, .wrapper-b {
+    width: 700px;
+    min-height: 550px;
+    margin: auto;
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+    //position: absolute; top: 50%; left: 50%;
+    //transform: translate(-50%, -50%);
+    box-shadow: 0 5px 18px -3px rgba(black, .14);
+    background: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    .modal-head {
+        .container {
+            border-bottom: 1px solid $borderColor;
+            padding: 1.7rem 0 1.4rem;
+            margin: 0 2.8rem;
+            display: flex;  align-items: center; 
+            .close-modal {
+                margin-left: auto;
+                width: 37px; height: 37px;
+                border: 1px solid $borderColor;
+                border-radius: 50%;
+                display: flex; align-items: center; justify-content: center;
+                cursor: pointer;
+                .x-icon {
+                    transition: all 300ms ease;
+                    span {
+                        display: block;
+                        width: 1px; height: 11px;
+                        background: #a9b5b7;
+                        transform: rotate(45deg);
+                        &::before {
+                            content: "";
+                            display: block;
+                            width: 1px; height: 11px;
+                            background: #a9b5b7;
+                            transform: rotate(90deg);
+                        }
+                    }
+                }
+                &:hover {
+                    .x-icon {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+    }
+    .inner-wrapper {
+        padding: 1.5rem 2.8rem;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        .drag-or-browse  {
+            flex: 1;
+            background: // Custom Dashed Border
+            linear-gradient(90deg, #17adbc 50%, transparent 0%),
+            linear-gradient(0deg, #17adbc 50%, transparent 0%),
+            linear-gradient(90deg, #17adbc 50%, transparent 0%),
+            linear-gradient(0deg, #17adbc 50%, transparent 0%);
+            background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
+            background-size: 16px 1px, 1px 16px, 16px 1px, 1px 16px;
+            background-position: left top, right top, left bottom, left top;
+            display: inherit;
+            .input-control{
+                width: 100%;
+                min-height: 100%;
+            }
+        }
+    }
+    .modal-footer {
+        background: #f7fafa;
+        padding: 1.5rem 2.8rem;
+        border-top: 1px solid $borderColor;
+        display: flex;
+        justify-content: flex-end;
+        border-radius: 0 0 5px 5px;
+        .attach-btn {
+            order: 2;
+            margin-left: .7rem;
+        }
+        .discard-btn {
+            order: 1;
+        }
+    }
+}
+
+.wrapper-b {
+    .inner-wrapper {
+        .upload-processing {
+            margin-bottom: 1.5rem;
+            .file-progress {
+                &:not(:last-child) {
+                    margin-bottom: .5rem;
+                }
+                border: 1px solid $borderColor;
+                border-bottom: 2px solid rgba($borderColor, .8);
+                border-radius: 3px;
+                padding: .9rem 1.5rem;
+                display: flex;
+                .file__icon {
+                    margin-right: 1.5rem;
+                    width: 26px; height: 34px;
+                    border: 1px solid #acb9ba;
+                    border-radius: 2px;
+                    position: relative;
+                    span {
+                        width: 12px; height: 11px;
+                        border: 1px solid #acb9ba;
+                        position: absolute; top: -1px; left: -1px;
+                        border-radius: 0 0 3px 0;
+                        &::before, &::after  {
+                            content: "";
+                            display: block;
+                            width: 0; height: 0;
+                        }
+                        &::before {
+                            border-left: 12px solid rgba(#acb9ba, .8);
+                            border-bottom: 12px solid transparent;
+                            position: absolute; top: -1px; left: -1px;
+                        }
+                        &::after {
+                            border-left: 12px solid #fff;
+                            border-bottom: 12px solid transparent;
+                            position: absolute; top: -1.5px; left: -2px;
+                        }
+                    }
+                    .file__type {
+                        position: absolute;
+                        top: 9px; left: 9px;
+                        -webkit-user-select: none;
+                        text-transform: uppercase;
+                        font-size: 7px;
+                        font-weight: 400;
+                        font-family: 'Segoe UI', sans-serif;
+                        background: $solidColor;
+                        color: #fff;
+                        border-radius: 1px;
+                        padding: .15rem .22rem .19rem;
+                    }
+                }
+                .file__data {
+                    flex: 1;
+                    .group-wrapper {
+                        display: flex;
+                        margin-bottom: .7rem;
+                        .file__title {
+                            font: {
+                                size: 15px;
+                                weight: 600;
+                            }
+                        }
+                        .cancle-upload {
+                            margin-left: auto;
+                            width: 17px; height: 17px;
+                            background: $borderColor;
+                            border: 1px solid transparent;
+                            border-radius: 50%;
+                            display: flex; align-items: center; justify-content: center;
+                            cursor: pointer;
+                            transition: all 300ms ease;
+                            &:hover {
+                                background: transparent;
+                                border: 1px solid $borderColor;
+                            }
+                            .x-icon {
+                                span {
+                                    display: block;
+                                    width: 1px; height: 11px;
+                                    background: #a8b4b6;
+                                    transform: rotate(45deg);
+                                    &::before {
+                                        content: "";
+                                        display: block;
+                                        width: 1px; height: 11px;
+                                        background: #a8b4b6;
+                                        transform: rotate(90deg);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .progress-bar {
+                        display: block;
+                        width: 100%;
+                        height: 4px;
+                        background: $borderColor;
+                        border-radius: 50px;
+                        span {
+                            display: block;
+                            height: 100%;
+                            background: $solidColor;
+                            border-radius: 50px;
+                        }
+                    }
+                    .upload-details {
+                        margin: .6rem 0 0 0;
+                        display: flex;
+                        font-size: 13px;
+                        .file__size, .percentage-progress {
+                            font-style: italic;
+                            &:not(:last-child) {
+                                margin-right: .7rem;
+                            }     
+                        }
+                        .speed {
+                            margin-left: auto;
+                            font-size: 12px;
+                        }
+                    }
+                }
+                &.file-progress-succeed {
+                    cursor: pointer;
+                    .file__data {
+                        .cancle-upload {
+                            display: none;
+                        }
+                        position: relative;
+                        .file__options {
+                            margin-left: auto;
+                            display: inline-flex;
+                            i {
+                                font-size: 19px;
+                                color: #a3b0b2;
+                                cursor: pointer;
+                                margin-left: 0.7rem;
+                                transition: all 200ms ease;
+                                &:hover {
+                                    color: lighten(#a3b0b2, 10);
+                                }
+                                &:active {
+                                    position: relative; top: 1px; left: 1px;
+                                }
+                            }
+                            .dropdown-modal {
+                                background: #fff;
+                                border: 1px solid $borderColor;
+                                border-radius: 3px;
+                                padding: 1.3rem 2.5rem;
+                                position: absolute;
+                                z-index: 10;
+                                box-shadow: 0 3px 9px -3px rgba(0, 0, 0, 0.15);
+                                display: none;
+                                &::before, &::after {
+                                    content: "";
+                                    display: block;
+                                    width: 0; height: 0;
+                                    border-right: 6px solid transparent;
+                                    border-left: 6px solid transparent;
+                                    position: absolute;
+                                    
+                                }
+                                &::before {
+                                    top: -9px;
+                                    right: 91px;
+                                    border-bottom: 8px solid darken($borderColor, 4);
+
+                                }
+                                &::after {
+                                    top: -7px;
+                                    right: 91px;
+                                    border-bottom: 8px solid #fff;
+
+                                }
+                                &.dropdown-modal-1 {
+                                    top: 31px;
+                                    right: -93px;
+
+                                }
+                                &.dropdown-modal-2 {
+                                    top: 31px;
+                                    right: -93px;
+                                }
+                                p {
+                                    margin: 0 0 1rem 0;
+                                    color: $textDark;
+                                    font-size: 14px;
+                                    font-weight: 600;
+
+                                }
+                                .group-wrapper {
+                                    margin: 0;
+                                    button {
+                                        flex-grow: 1;
+                                        &:not(:last-child) {
+                                            margin-right: 1rem; 
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .progress-bar {
+                            display: none;
+                        }
+                        .upload-details {
+                            .file__size, .speed {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        .drag-or-browse  {
+            display: inherit;
+            .input-control{
+                .inputfile + label {
+                    flex-direction: row;
+                    padding: 1.7rem 0;
+                    span {
+                        width: auto;
+                    }
+                    i {
+                        margin-right: .7rem;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
