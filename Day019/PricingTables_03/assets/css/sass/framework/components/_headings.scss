@@ -1,0 +1,15 @@
+
+/* Headings */  
+
+h1, h2, h3, h4, h5, h6 {
+    color: $colorPrimary;
+    font-family: $fontHeadings;
+}
+
+h3 {
+    font: {
+        size: $large;
+        weight: 400;
+    }
+}
+

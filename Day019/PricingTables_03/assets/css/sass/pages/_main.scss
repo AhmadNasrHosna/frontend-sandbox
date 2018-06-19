@@ -1,0 +1,124 @@
+//* { outline: 1px solid red; }
+
+.pracing-tables {
+    .grid-wrapper {
+        grid-template-columns: 1fr;
+        //grid-template-rows: minmax(650px, auto);
+        grid-gap: 2rem;
+        @include media-allsm {
+            margin-bottom: 10rem;
+        }
+        @include media-onlymd {
+            grid-template-columns: 1fr 1fr;
+        }
+        @include media-lg { // Special Plan 
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 20px 1fr 20px;
+            grid-row-gap: 0;
+        }
+        //position: relative;
+        .plan { 
+            /* (min) needed be resposive when content being long*/ 
+            min-height: 0;
+            border-radius: $br6;
+            padding: 2.6rem;
+            .flex-wrapper {
+                height: 100%;
+                /* Declare (Height: 100%; NOT min-height)to the flexbox wrapper to make
+                it fit all the new parent height when changes.
+                and make the space between inner elements spread inside the new parent 
+                height that deband on min-height property */ 
+                flex-flow: nowrap column;
+                justify-content: space-between;
+                .plan__head {
+                    border: 1px solid $colorPrimary;
+                    padding: 1rem 2.6rem 1.2rem;
+                    .plan__title {
+                        margin: 0;
+                        padding: .2rem 0 1rem;
+                        border-bottom: 1px solid $colorPrimary;
+                    }
+                    .plan__price {
+                        margin: .5rem 0 0 0;
+                        span {
+                            font-family: $fontNumber;
+                            font-size: $xxxxLarge;
+                            position: relative;
+                            sub {
+                                font-size: $aboveMedium;
+                                position: absolute;
+                                top: 40px; left: -10px;
+                            }
+                        }
+                    }
+                }
+                .plan__features {
+                    margin: 3rem 0 auto;
+                    padding-bottom: 3rem;
+                    span {
+                        display: block;
+                        &:not(:last-child) {
+                            margin-bottom: .8rem;
+                        }
+                    }
+                }
+            }
+            /* Basic Plan */
+            &.basic-plan {
+                background: #f3f3f3;
+                @include media-onlymd {
+                    grid-column: 1 / -1;
+                    grid-row: 1;
+                }
+                @include media-lg {
+                    grid-column: 1 ;
+                    grid-row: 2 / 3;
+                }
+            }
+            /* Pro Plan */
+            &.pro-plan {
+                background: $colorSecondary;
+                color: #fff;
+                @include media-onlymd {
+                    grid-column: 1;
+                    grid-row: 2;
+                }
+                @include media-lg {
+                    grid-column: 2 ;
+                    grid-row: 1 / -1;
+                }
+                /*@include media-lg {
+                    position: absolute;
+                    left: 50%; right: 50%;
+                    top: -19px;
+                    transform: translateX(-50%);
+                    width: 357.56px;
+                }*/
+                .plan__head {
+                    .plan__title { color: $colorPrimary;  font-size: $aboveLarge;}
+                    .plan__price { span { font-size: $xxxxxLarge; } }
+                }
+            }
+            /* Bussiness Plan */
+            &.bussiness-plan {
+                background: $colorPrimary;
+                @include media-onlymd {
+                    grid-column: 2;
+                    grid-row: 2;
+                }
+                @include media-lg {
+                    grid-column: 3;
+                    grid-row: 2 / 3;
+                }
+                .plan__head {
+                    border: 1px solid #fff;
+                    .plan__title {
+                        color: #fff;
+                        border-bottom: 1px solid #fff;
+                    }
+                    .plan__price { color: #fff; }
+                }
+            }
+        }
+    }
+}
