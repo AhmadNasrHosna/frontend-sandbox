@@ -1,4 +1,4 @@
-# File Upload
+# Pricing Tables
 
 • This page created on Jun 18, 2018.
 
@@ -12,6 +12,6 @@ Twitter: @ahmedhosna95
 
 • UI Design from [dribbble](https://dribbble.com/shots/2404227-UI-challenge-Pricing-030), I got it in order to implement it in HTML & CSS.
 
-## HTML/CSS Result - [Live Preview](#)
+## HTML/CSS Result - [Live Preview](https://goo.gl/j3dujo)
 
-![](assets\img\frame-generic.png)
+![](assets/img/frame-generic.png)
