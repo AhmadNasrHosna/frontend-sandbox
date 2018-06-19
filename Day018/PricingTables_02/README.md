@@ -1,4 +1,4 @@
-# PricingTables
+# Pricing Tables
 
 • This page created on Jun 17, 2018.
 
