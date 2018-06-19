@@ -1,0 +1,108 @@
+//* { outline: 1px solid red; }
+
+.pracing-tables {
+    @include media-allsm {
+        margin-bottom: 10rem;
+    }
+    .grid-wrapper {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 1.6rem;
+        @include media-onlymd {
+            grid-template-columns: 1fr 1fr;
+        }
+        @include media-sm {
+            grid-template-columns: 1fr;
+        }
+        .plan {   
+            padding: 1.9rem;
+            background: linear-gradient(#fff, rgba(#fff, .8) ,transparent);
+            .flex-wrapper {
+                min-height: 600px;
+                flex-flow: nowrap column;
+                align-items: center;
+                justify-content: space-between;
+                .plan__thumb {
+                    margin: 0 auto;
+                    -webkit-user-select: none;
+                    user-select: none;
+                    
+                }
+                .plan__price {
+                    margin: 0;
+                    font-size: $xxxxLarge;
+                    sub {
+                        font-weight: 300;
+                        &:first-of-type {
+                            font-size: $aboveLarge;
+                            display: inline-block;
+                            transform: translateY(-4rem);
+                        }
+                        &:last-of-type {
+                            font-size: $underLarge;
+                        }
+                    }
+                }
+                .plan__features {
+                    margin-top: -2rem;
+                    font-size: $aboveMedium; 
+                    font-weight: 700;
+                    span {
+                        font-size: $default; 
+                        font-weight: 600;
+                    }
+                }
+            }
+            position: relative;
+            z-index: 1;
+            &::before {
+                display: block;
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: #fff;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                transition: all 300ms ease;
+            }
+            &:hover {
+                &::before {
+                    opacity: 0;
+                }
+            }
+            
+        }
+        .plan-a {
+            @include media-onlymd {
+                grid-column: 2;
+                grid-row: 2;
+            }
+            @include media-sm {
+                grid-row: 3;
+            }
+        }
+        .plan-b {
+            @include media-onlymd {
+                grid-column: 1 / -1;
+                grid-row: 1;
+            }
+            @include media-sm {
+                grid-row: 1;
+            }
+            &::before {
+                opacity: 0;
+            }
+        }
+        .plan-c {
+            @include media-onlymd {
+                grid-column: 1;
+                grid-row: 2;
+            }
+            @include media-sm {
+                grid-row: 2;
+            }
+        }
+    }
+}

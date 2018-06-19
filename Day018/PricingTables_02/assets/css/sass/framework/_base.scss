@@ -1,0 +1,67 @@
+/*
+html, body {
+    width: 100%;
+    height: 100%;
+} */
+
+html {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    //background: linear-gradient(to bottom, #183f61, #a8a4b6 );
+    //background-attachment: fixed;
+    background: $bgColor;
+    color: $colorPrimary;
+    margin: 3rem 0;
+    line-height: 1.5;
+    font: {
+        family: $fontText;
+        size: $underLarge;
+    }
+}
+
+* {
+    box-sizing: inherit;
+    &::before, &::after {
+        box-sizing: inherit;
+    }
+}
+
+img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    -ms-interpolation-mode: bicubic;
+}
+
+/* Lists */
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* Anchor Link*/
+
+a {
+    color: inherit;
+    text-decoration: none;
+    a:hover,
+    a:focus,
+    a:active {
+        text-decoration: none;
+        outline: none;
+    }
+}
+
+select { width: 100%; }
+input:focus { outline: 0; }
+
+
+::selection { background-color: $bgColor; color: $colorPrimary; }
+::-moz-selection { background-color: $bgColor; color: $colorPrimary; }
