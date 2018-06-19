@@ -1,0 +1,122 @@
+//* { outline: 1px solid red; }
+
+.skewed-bg {
+    width: 100%;
+    height: 40vh;
+    background: linear-gradient(45deg, #0b4486, #2789cf);
+    position: fixed;
+    bottom: 0; left: 0;
+    z-index: -1;
+    // Skewed Edges
+    -webkit-clip-path: polygon(0% 0%, 100% 4em, 100% calc(100% - 7em), 0% 100%);
+    clip-path: polygon(0% 0%, 100% 3em, 100% calc(100% - 0em), 0% 100%);
+
+}
+.wrapper {
+    z-index: 2;
+    @include media-sm {
+        margin-bottom: 10rem;
+    }
+    .section-head {
+        .section__heading {
+            @include media-allsm {
+                margin-bottom: 2.2rem;
+            }
+        }
+    }
+    margin-top: 8.2rem;
+    @include media-allsm {
+        margin-top: 0rem;
+    }
+    .grid-wrapper {
+       
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-column-gap: 2.6rem;
+        grid-row-gap: 3.6rem;
+        @include media-onlymd {
+            grid-template-columns: 1fr 1fr;
+        }
+        @include media-sm {
+            grid-template-columns: 1fr;
+        }
+        padding-top: 8rem;
+        @include media-allsm {
+            padding-top: 0rem;
+        }
+        .price-table {
+            background: #fff;
+            box-shadow: 0 30px 50px rgba(darken(#1f75ba, 10), .23);
+            @include media-sm {
+                box-shadow: 0 20px 50px rgba(darken(#1f75ba, 10), .23);
+            }
+            border-radius: $br10;
+            .flex-wrapper {
+                height: 300px;
+                padding: 2.4rem 0;
+                flex-flow: nowrap column;
+                span {
+                    display: block;
+                    &:not(:last-of-type) {
+                        margin-bottom: .2rem;
+                    }
+                    &.hard-size {
+                        font-size: $medium;
+                        font-weight: 700;
+                    }
+                    &.price {
+                        font-size: $aboveXLarge;
+                        font-weight: 700;
+                        color: $colorPrimaryLight;
+                        margin: 1.5rem 0;
+                    }
+                    &.CPU,&.memory,&.bandwidth {
+                        color: $colorSecondary;
+                        strong {
+                            color: $colorPrimaryDark;
+                        }
+                    }
+                }
+            }
+            &.best-value {
+                background: linear-gradient(45deg, #0b4486, #2789cf);
+                color: #fff;
+                box-shadow: 0 30px 50px rgba(#000, .28);
+                @include media-sm {
+                    box-shadow: 0 20px 45px rgba(#000, .26);
+                }
+                @include media-onlymd {
+                    box-shadow: 0 20px 45px rgba(#000, .22);
+                }
+                transform: translateY(-7rem);
+                @include media-allsm {
+                    transform: translateY(0rem);
+                }
+                @include media-onlymd {
+                    grid-column: 1 / -1;
+                    grid-row: 1;
+                }
+                .flex-wrapper {
+                    padding: 2rem 0;
+                    > :first-child  {
+                        font-size: $xSmall;
+                        font-weight: 600;
+                        color: rgba(#fff, .5)
+                    }
+                    span {
+                        &.hard-size {
+                            margin: .7rem 0;
+                        }
+                        &.price {
+                            color: #fff;
+                            margin: 1.5rem 0 2.2rem;
+                        }
+                    }
+                    button {
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+}

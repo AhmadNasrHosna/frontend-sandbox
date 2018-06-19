@@ -1,0 +1,80 @@
+/* -----------------------------------------------------------
+## Colors
+--------- */
+
+/* Font Colors */
+$colorBody: #444;
+
+$colorPrimary: #1f75ba;
+$colorPrimaryLight: lighten(#1f75ba, 12%);
+$colorPrimaryDark: #2e2e2e;
+
+$colorSecondary: #6a7a8f;
+$colorSecondaryLight: lighten(#6a7a8f, 10%);
+$colorSecondaryDark: darken(#6a7a8f, 15%);
+
+/* Background Colors */
+$bgColor: #ffffff;
+
+/* Button Colors */
+$bgButton: #0066cc;
+$colorButtonText: #fff;
+
+
+/* -----------------------------------------------------------
+## Font Family 
+-------------- */
+$fontText: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$fontHeadings: 'Montserrat', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$display: source-serif-pro, Georgia, "Times New Roman", Times, serif;
+$code: source-code-pro, Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+
+
+/* -----------------------------------------------------------
+# Font Size
+---------------- */
+$xxxSmall: 7px;	
+$xxSmall: 9px;	
+$xSmall: 11px;	
+$small: 12px;	
+$underRegular: 15px;
+$regular: 16px;
+$aboveRegular: 17px;
+$medium: 18px;
+$aboveMedium: 20px;
+$underLarge: 22px;
+$large: 24px;
+$aboveLarge: 26px;
+$underXLarge: 28px;
+$aboveXLarge: 36px;
+$xLarge: 32px;	
+$xxLarge: 48px;	
+$xxxLarge: 64px;	
+$xxxxLarge: 96px;	
+
+
+/* -----------------------------------------------------------
+# Font Weight  
+---------------- */
+$thin: 100;
+$light: 300;
+$regular: 400;
+$semiBold: 600;
+$bold: 700;
+$extraBold: 800;
+$black: 900;
+
+
+/* -----------------------------------------------------------
+# Border Radius
+---------------- */
+$br1: 1px;
+$br2: 2px;
+$br3: 3px;
+$br4: 4px;
+$br5: 5px;
+$br6: 6px;
+$br7: 7px;
+$br8: 8px;
+$br9: 9px;
+$br10: 10px;
