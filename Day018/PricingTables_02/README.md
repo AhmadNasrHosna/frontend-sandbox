@@ -1,4 +1,4 @@
-# File Upload
+# PricingTables
 
 • This page created on Jun 17, 2018.
 
@@ -12,6 +12,6 @@ Twitter: @ahmedhosna95
 
 • UI Design from [dribbble](https://dribbble.com/shots/2459446-Pricing), I got it in order to implement it in HTML & CSS.
 
-## HTML/CSS Result - [Live Preview](#)
+## HTML/CSS Result - [Live Preview](https://goo.gl/rnXPoJ)
 
-![](assets\img\frame-generic.png)
+![](assets/img/frame-generic.png)
