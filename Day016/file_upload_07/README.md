@@ -2,7 +2,7 @@
 
 • This page created on Jun 15, 2018.
 
-It's a part of my Front-end web development daily practise.
+It's a part of my Front-end web development daily practice.
 
 I started on May 31, 2018.
 
