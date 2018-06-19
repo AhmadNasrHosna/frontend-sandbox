@@ -1,0 +1,305 @@
+html {
+  box-sizing: border-box; }
+
+/*
+html, body {
+    width: 100%; height: 100%;
+}*/
+body {
+  background: #b4d4fa;
+  color: #646a6b;
+  margin: 3rem 0;
+  font-family: "Nunito", sans-serif; }
+
+* {
+  box-sizing: inherit; }
+  *::before, *::after {
+    box-sizing: inherit; }
+
+/* Headings */
+h2 {
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  font-weight: 600; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1; }
+
+.inputfile + label {
+  width: 100%;
+  height: 160px;
+  padding: 1.7rem;
+  border: 2px dashed #157efb;
+  border-radius: 6px;
+  letter-spacing: .5px;
+  background: #dcebfe;
+  color: #157efb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  -webkit-user-select: none;
+  cursor: pointer;
+  overflow: hidden;
+  font-size: 16px;
+  font-weight: 700; }
+  .inputfile + label i {
+    margin-bottom: 0rem;
+    font-size: 62px; }
+
+.wrapper {
+  width: 290px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 20px 60px -3px rgba(0, 0, 0, 0.22);
+  border-radius: 5px; }
+  .wrapper .drag-browse-area {
+    background: #fff;
+    padding: 1.1rem 1.5rem;
+    border-radius: 5px 5px 0 0; }
+  .wrapper .upload-processing {
+    background: transparent; }
+    .wrapper .upload-processing .file-progress {
+      padding: 1.1rem 1.5rem;
+      background: #157efb;
+      color: #fff;
+      display: flex;
+      align-items: center; }
+      .wrapper .upload-processing .file-progress:not(:last-child) {
+        border-bottom: 1px solid #fff; }
+      .wrapper .upload-processing .file-progress:last-child {
+        border-radius: 0 0 5px 5px;
+        box-shadow: 0 3px 0 0px #0b58b4; }
+      .wrapper .upload-processing .file-progress .progress-cricle {
+        margin-right: 1rem; }
+        .wrapper .upload-processing .file-progress .progress-cricle .progress-radial {
+          position: relative;
+          width: 28px;
+          height: 28px;
+          border-radius: 50%;
+          background-color: #FFF;
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+          .wrapper .upload-processing .file-progress .progress-cricle .progress-radial .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 21px;
+            height: 21px;
+            background-color: #157efb;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 28px;
+            font-size: 8px;
+            color: #fff; }
+            .wrapper .upload-processing .file-progress .progress-cricle .progress-radial .overlay i {
+              display: none;
+              font-size: 15px;
+              font-weight: 600; }
+          .wrapper .upload-processing .file-progress .progress-cricle .progress-radial.progress-65 {
+            background-image: linear-gradient(-36deg, #FFF 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #FFF 50%, #5ba2fc 50%, #5ba2fc); }
+          .wrapper .upload-processing .file-progress .progress-cricle .progress-radial.progress-80 {
+            background-image: linear-gradient(18deg, #FFF 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #FFF 50%, #5ba2fc 50%, #5ba2fc); }
+          .wrapper .upload-processing .file-progress .progress-cricle .progress-radial.progress-100 {
+            background-image: linear-gradient(90deg, #FFF 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #FFF 50%, #5ba2fc 50%, #5ba2fc); }
+      .wrapper .upload-processing .file-progress .file__details {
+        flex: 1; }
+        .wrapper .upload-processing .file-progress .file__details .file__title {
+          letter-spacing: .5px; }
+        .wrapper .upload-processing .file-progress .file__details .processing-info {
+          margin: .3rem 0 0 0;
+          font-size: 10px;
+          font-family: "Nunito Sans", sans-serif;
+          font-weight: 300;
+          letter-spacing: .3px; }
+      .wrapper .upload-processing .file-progress .file__cancel .btn {
+        background: #fff;
+        color: #157efb;
+        width: 15px;
+        height: 15px;
+        padding: 0;
+        -webkit-border-radius: 50%;
+        position: relative; }
+        .wrapper .upload-processing .file-progress .file__cancel .btn span {
+          display: block;
+          width: 1px;
+          height: 11px;
+          background: #157efb;
+          position: absolute;
+          top: 2px;
+          right: 7px;
+          transform: rotate(45deg);
+          border-radius: 50px; }
+          .wrapper .upload-processing .file-progress .file__cancel .btn span::before {
+            content: "";
+            display: block;
+            width: inherit;
+            height: inherit;
+            background: inherit;
+            transform: rotate(90deg);
+            border-radius: 50px; }
+        .wrapper .upload-processing .file-progress .file__cancel .btn:hover {
+          opacity: .8; }
+      .wrapper .upload-processing .file-progress.complete .progress-cricle .progress-radial .overlay i {
+        display: inline; }
+      .wrapper .upload-processing .file-progress.complete .file__details .processing-info .orig-file-size, .wrapper .upload-processing .file-progress.complete .file__details .processing-info .upload-spead {
+        display: none; }
+      .wrapper .upload-processing .file-progress.complete .file__cancel .btn {
+        background: rgba(255, 255, 255, 0.5);
+        cursor: auto; }
+
+/* Developed By*/
+.dev-by {
+  color: #555;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  position: absolute;
+  bottom: .7rem;
+  right: 0;
+  left: 0;
+  margin: auto; }
+  .dev-by span:not(:last-child) {
+    margin-right: .5rem; }
+  .dev-by span a {
+    position: relative; }
+    .dev-by span a::before {
+      content: "";
+      display: inline-block;
+      width: 100%;
+      height: 5px;
+      background: rgba(255, 255, 255, 0.5);
+      position: absolute;
+      bottom: 0;
+      z-index: -1;
+      transition: all 300ms ease; }
+    .dev-by span a:hover::before {
+      height: 90%; }
+  .dev-by img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: .8rem;
+    box-shadow: 0 2px 10px -3px black;
+    -webkit-user-select: none; }
+
+/* ===== START Framework! ===================== */
+.dis-block {
+  display: block; }
+  @media (max-width: 767px) {
+    .dis-block.dis-block-sm {
+      display: block; } }
+
+button {
+  border: 0;
+  padding: 0; }
+
+.btn {
+  border-radius: 6px;
+  padding: .5rem .9rem;
+  transition: all 300ms ease;
+  cursor: pointer;
+    /*
+    &.btn {
+        @media (min-width: 0px) { // All Screeens
+            font-size: 14px;
+        }
+        @media (min-width: 0px) { // Mobiles
+            font-size: 14px;
+        }
+        @media (min-width: 0px) { // Medium Screens
+            font-size: 14px;
+        }
+        @media (min-width: 0px) { // Larg Screens
+            font-size: 14px;
+        }
+    }
+
+    */ }
+  .btn:active {
+    position: relative;
+    top: 1px;
+    left: 1px;
+    transform: scale(0.98); }
+  .btn:focus {
+    outline: 1px dotted #aaa; }
+  .btn.btn-sm {
+    padding: .5rem 1.4rem !important;
+    font-size: 13px !important; }
+  .btn.btn-md {
+    padding: .5rem 1.7rem !important;
+    font-size: 14px !important; }
+  .btn.btn-lg {
+    padding: .7rem 1.7rem !important; }
+  .btn.btn-default {
+    background: #0066cc;
+    color: #fff; }
+    .btn.btn-default:focus {
+      outline: 1px dotted #0066cc !important; }
+  .btn.btn-default--outline {
+    background: transparent;
+    color: #0066cc;
+    border: 1px solid #0066cc; }
+    .btn.btn-default--outline:focus {
+      outline: 1px dotted #0066cc !important; }
+  .btn.btn-danger {
+    background: #f97f6f;
+    color: #fff; }
+    .btn.btn-danger:hover {
+      background: #fa9083; }
+    .btn.btn-danger:focus {
+      outline: 1px dotted #f97f6f !important; }
+  .btn.btn-danger-outline {
+    background: transparent;
+    color: #f97f6f;
+    border: 1px solid #f97f6f; }
+    .btn.btn-danger-outline:focus {
+      outline: 1px dotted #f97f6f !important; }
+  .btn.btn-disabled {
+    cursor: not-allowed; }
+    .btn.btn-disabled:active {
+      position: relative;
+      top: 0px;
+      left: 0px;
+      transform: scale(1); }
+    .btn.btn-disabled:focus {
+      outline: 1px dotted #abb9ba !important; }
+  .btn.btn {
+    font-size: 16px !important;
+    font-weight: 600; }
+  .btn.btn-green {
+    background: #81c548;
+    color: #fff;
+    border: 1px solid #64ab25; }
+    .btn.btn-green:hover {
+      background: #8ecb5b; }
+    .btn.btn-green:focus {
+      outline: 1px dotted #81c548 !important; }
+
+/* Aligning */
+.text-center {
+  text-align: center; }
+
+/* ===== END Framework! ===================== */
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Page Info -->
+    <title>File Upload</title>
+    <meta name="description" content="Front-end daily practise.">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Font Icons -->
+    <link rel="stylesheet" href="assets/fonts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicicons/css/ionicicons.css" >
+
+    <!-- Google Fronts -->
+    <!--
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i|Varela+Round" rel="stylesheet">
+
+
+
+</head>
+    <!--
+    • This page created on Jun 14, 2018.
+    It's a part of my Front-end web development daily practise.
+    I started on May 31, 2018.
+    I'm practising since 15 days and counting to reach my goal: 1111 days (3 years) of daily practise.
+
+    - UI design based on and inspired from: 
+    https://dribbble.com/shots/2639536-File-Upload/attachments/528752
+
+    • My Personal Website:
+    • Twitter: @ahmedhosna95
+    -->
+
+<body>
+    
+    <div class="wrapper">
+        <div class="drag-browse-area">
+            <div class="input-control">
+                <input type="file" name="file[]" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
+                <label for="file">
+                        <i class="ion ion-ios-cloud-upload-outline"></i>
+                        <span>Drag file to upload</span>
+                </label>
+            </div>
+        </div>
+        <div class="upload-processing">
+            <div class="file-progress complete">
+                <div class="progress-cricle">
+                    <div class="progress-radial progress-100">
+                        <div class="overlay">
+                            <i class="ion ion-md-checkmark"></i>
+                            <span id="percentage-progress"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="file__details">
+                    <h2 class="file__title">Project_Logo.png</h2>
+                    <p class="processing-info">
+                        <span class="uploaded">Complete</span>
+                        <span class="orig-file-size">of 8.6MB</span>
+                        <span class="upload-spead">(458KB/sec)</span>
+                    </p>
+                </div>
+                <div class="file__cancel">
+                    <button class="btn" type="button">
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+            <div class="file-progress">
+                <div class="progress-cricle">
+                   <div class="progress-radial progress-80">
+                        <div class="overlay">
+                            <i class="ion ion-md-checkmark"></i>
+                            <span id="percentage-progress"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="file__details">
+                    <h2 class="file__title">Project_Logo.png</h2>
+                    <p class="processing-info">
+                        <span class="uploaded">6.9MB</span> 
+                        <span class="orig-file-size">of 8.6MB</span>
+                        <span class="upload-spead">(458KB/sec)</span>
+                    </p>
+                </div>
+                <div class="file__cancel">
+                    <button class="btn" type="button">
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+            <div class="file-progress">
+                <div class="progress-cricle">
+                     <div class="progress-radial progress-65">
+                        <div class="overlay">
+                            <i class="ion ion-md-checkmark"></i>
+                            <span id="percentage-progress"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="file__details">
+                    <h2 class="file__title">Project_Logo.png</h2>
+                    <p class="processing-info">
+                        <span class="uploaded">6.9MB</span>
+                        <span class="orig-file-size">of 8.6MB</span>
+                        <span class="upload-spead">(458KB/sec)</span>
+                    </p>
+                </div>
+                <div class="file__cancel">
+                    <button class="btn" type="button">
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Developed by Ahmed -->
+    <div class="dev-by">
+        <img src="assets/img/avatar.jpg">
+        <span>Developed by <a href="https://github.com/ahmedhosna95" target="_blank">ahmedhosna95</a>;</span>
+        <span>{<a href="#" target="_blank">Font-end Daily Practice</a>}</span>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/custom.js"></script> 
+</body>
+</html>
