@@ -1,0 +1,128 @@
+//* { outline: 1px solid red; }
+
+.pricing-tables {
+    @include media-allsm {
+        margin-bottom: 10rem;
+    }
+    .section__head {
+        margin-bottom: 3.5rem;
+        .section__title {
+            color: #fff;
+        }
+    }
+    .price-plans {
+        grid-template-columns: 1fr;
+        grid-column-gap: .8rem;
+        grid-row-gap: 2rem;
+        @include media-lg {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 22px 1fr 65px;
+            grid-row-gap: 0;
+        }
+        @include media-onlymd {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+        }
+        .plan {
+            background: #fff;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 0 0 1.7rem;
+            border-radius: $br10;
+            box-shadow: 0 5px 20px rgba(black, .09);
+            .plan__title {
+                margin: 0;
+                padding: 1.7rem 0 1.2rem;
+            }
+            .price-group-wrapper {
+                background: #f7f7f7;
+                padding: 1.5rem 0 1.3rem;
+                margin-bottom: auto;
+                .plan__price {
+                    font-size: $xxxLarge;
+                    font-weight: 600;
+                    position: relative;
+                    sub {
+                        font-size: $aboveLarge;
+                        position: absolute;
+                        top: 27px; left: -27px;
+                    }
+                }
+                .plan__time {
+                    font-size: $aboveSmall;
+                    font-weight: 600;
+                    position: relative;
+                    top: -13px;
+                }
+            }
+            .plan__features {
+                padding: 2rem 0;
+                margin: auto;
+                span {
+                    font-size: $default;
+                    display: block;
+                    &:not(:last-child) {
+                        margin-bottom: .3rem;
+                    }
+                }
+            }
+            .plan__btn {
+                margin: 0 auto;
+                width: 77%;
+            }
+            &:hover {
+                .plan__btn {
+                    background: $bgButtonHover;
+                    box-shadow: 0 12px 40px rgba($bgButton, .47);
+                    &:hover {
+                        background: transparent;
+                        color: $bgButtonHover;
+                        border: 2px solid $bgButtonHover;
+                    }
+                }
+            }
+        }
+        &:hover {
+            .plan--pro__btn {
+                background: $bgButton;
+            }
+        }
+        .plan--free {
+            @include media-onlymd {
+                grid-column: 1;
+                grid-row: 2;
+            }
+            @include media-lg {
+                grid-column: 1;
+                grid-row: 2;
+            }
+        }
+        .plan--pro {
+            @include media-onlymd {
+                grid-column: 1 / -1;
+                grid-row: 1;
+            }
+            @include media-lg {
+                grid-column: 2;
+                grid-row: 1 / -1;
+                .price-group-wrapper {
+                    padding-bottom: 2.65rem;
+                    .plan__price, .plan__time {
+                        position: relative;
+                        top: 4px;
+                    }
+                }
+            }
+        }
+        .plan--team {
+            @include media-onlymd {
+                grid-column: 2;
+                grid-row: 2;
+            }
+            @include media-lg {
+                grid-column: 3;
+                grid-row: 2;
+            }
+        }
+    }
+}

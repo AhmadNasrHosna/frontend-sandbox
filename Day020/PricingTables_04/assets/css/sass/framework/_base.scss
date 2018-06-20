@@ -1,0 +1,69 @@
+/*
+html, body {
+    width: 100%;
+    height: 100%;
+} */
+
+html {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    background: rgb(248,248,248);
+    background: linear-gradient(0deg, rgba(248,248,248,1) 50%, rgba(76,146,251,1) 50%, rgba(25,107,219,1) 100%);
+    background-attachment: fixed;
+    //background: $bgColor;
+    color: $colorPrimary;
+    margin: 5rem 0 3rem;
+    line-height: 1.5;
+    font: {
+        family: $fontText;
+        size: $medium;
+        weight: 500;
+    }
+}
+
+* {
+    box-sizing: inherit;
+    &::before, &::after {
+        box-sizing: inherit;
+    }
+}
+
+img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    -ms-interpolation-mode: bicubic;
+}
+
+/* Lists */
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* Anchor Link*/
+
+a {
+    color: inherit;
+    text-decoration: none;
+    a:hover,
+    a:focus,
+    a:active {
+        text-decoration: none;
+        outline: none;
+    }
+}
+
+select { width: 100%; }
+input:focus { outline: 0; }
+
+
+//::selection { background-color: $bgColor; color: $colorPrimary; }
+//::-moz-selection { background-color: $bgColor; color: $colorPrimary; }
