@@ -1,0 +1,88 @@
+/* -----------------------------------------------------------
+## Colors
+--------- */
+
+/* Font Colors */
+$colorBody: #333;
+$white: #FFFFFF;
+
+$colorPrimary: #4a4a4a;
+$colorPrimaryLight: lighten(#c2955b, 12%);
+$colorPrimaryDark: #2e2e2e;
+
+$colorSecondary: #db3827;
+$colorSecondaryLight: lighten(#6a7a8f, 10%);
+$colorSecondaryDark: darken(#6a7a8f, 15%);
+
+/* Background Colors */
+$bgColor: #223843;
+
+/* Button Colors */
+$bgButton: #db3827;
+$bgButtonHover: #2b76e1;
+$colorButtonText: #4a4a4a;
+
+
+/* -----------------------------------------------------------
+## Font Family 
+-------------- */
+$fontText: 'Roboto', sans-serif;
+$fontHeadings: 'Roboto', sans-serif;
+$display: source-serif-pro, Georgia, "Times New Roman", Times, serif;
+$code: source-code-pro, Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+$fontNumber: 'Rozha One', serif;
+
+
+/* -----------------------------------------------------------
+# Font Size
+---------------- */
+$xxxSmall: 7px;	
+$xxSmall: 9px;	
+$xSmall: 11px;	
+$small: 12px;	
+$aboveSmall: 14px;	
+$underDefault: 15px;
+$default: 16px;
+$aboveDefault: 17px;
+$medium: 18px;
+$aboveMedium: 20px;
+$underLarge: 22px;
+$large: 24px;
+$aboveLarge: 26px;
+$underXLarge: 28px;
+$xLarge: 32px;	
+$aboveXLarge: 36px;
+$xxLarge: 48px;	
+$xxxLarge: 64px;	
+$xxxxLarge: 96px;	
+$xxxxxLarge: 120px;
+
+
+/* -----------------------------------------------------------
+# Font Weight  
+---------------- */
+$thin: 100;
+$light: 300;
+$regular: 400;
+$semiBold: 600;
+$bold: 700;
+$extraBold: 800;
+$black: 900;
+
+
+/* -----------------------------------------------------------
+# Border Radius
+---------------- */
+$br1: 1px;
+$br2: 2px;
+$br3: 3px;
+$br4: 4px;
+$br5: 5px;
+$br6: 6px;
+$br7: 7px;
+$br8: 8px;
+$br9: 9px;
+$br10: 10px;
+$br50: 50px;
+$brCircle: 50%;
+

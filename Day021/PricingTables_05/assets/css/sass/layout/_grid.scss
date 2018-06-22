@@ -1,0 +1,20 @@
+.container {
+    position: relative;
+    width: 66%;
+    max-width: 1200px;
+    margin: auto;
+    @include media-allsm {
+        width: 85%;
+    }
+    @include media-xs {
+        width: 90%;
+    }
+}
+
+.flex-wrapper {
+    @include flex;
+}
+
+.grid-wrapper {
+    @include grid;
+}
