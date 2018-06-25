@@ -20,21 +20,6 @@
             border-radius: $br50;
             flex-wrap: wrap;
             max-width: 420px;
-            overflow: hidden;
-            position: relative;
-            &::after {
-                content: "";
-                display: block;
-                width: 420px; height: 100%;
-                background-color: silver;
-                background-image: radial-gradient(white 15%, transparent 16%),
-                radial-gradient(white 15%, transparent 16%);
-                background-size: 18px 18px;
-                background-position: 0 0, 30px 30px;
-                position: absolute;
-                opacity: .15;
-                z-index: -1;
-            }
     }
     span {
         &:not(:last-child) {
@@ -47,7 +32,7 @@
                 display: inline-block;
                 width: 100%;
                 height: 5px;
-                background: rgba(#fff, .19);
+                background: rgba($colorPrimary, .19);
                 position: absolute;
                 bottom: 0;
                 z-index: -1;
