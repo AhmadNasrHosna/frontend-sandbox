@@ -12,6 +12,6 @@ Twitter: @ahmedhosna95
 
 • UI Design from [dribbble](https://dribbble.com/shots/3444019-Pricing-Page-UI-Concept), I got it in order to implement it in HTML & CSS.
 
-## HTML/CSS Result - [Live Preview](#)
+## HTML/CSS Result - [Live Preview](https://cdn.rawgit.com/ahmedhosna95/Front-end-Daily-Practice/740ffd12/Day022/PricingTables_06/index.html)
 
-![](assets\img\frame-generic.png)
+![](assets/img/frame-generic.png)
