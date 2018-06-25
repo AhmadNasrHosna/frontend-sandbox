@@ -1,0 +1,69 @@
+/*
+html, body {
+    width: 100%;
+    height: 100%;
+} */
+
+html {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    background: linear-gradient(to bottom, rgba(#3BBAEB,1), rgba(#D3EDFF,1));
+    background-attachment: fixed;
+    //background: #3BBAEB;
+    color: $colorPrimary;
+    margin: 5rem 0 3rem;
+    line-height: 1.5;
+    font: {
+        family: $fontText;
+        size: $default;
+    }
+}
+
+* {
+    box-sizing: inherit;
+    &::before, &::after {
+        box-sizing: inherit;
+    }
+}
+
+img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    -ms-interpolation-mode: bicubic;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* Lists */
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* Anchor Link*/
+
+a {
+    color: inherit;
+    text-decoration: none;
+    a:hover,
+    a:focus,
+    a:active {
+        text-decoration: none;
+        outline: none;
+    }
+}
+
+select { width: 100%; }
+input:focus { outline: 0; }
+
+
+::selection { background-color: $colorSecondary; color: #fff; }
+::-moz-selection { background-color: $colorSecondary; color: #fff; }
