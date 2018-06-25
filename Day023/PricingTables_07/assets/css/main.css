@@ -378,6 +378,9 @@ button {
   box-shadow: 0 5px 127px 0 rgba(0, 0, 0, 0.07);
   transition: background-color .4s ease-in-out;
   border-radius: 4px; }
+  @media only screen and (max-width: 991px) {
+    .pricing-tables {
+      margin-bottom: 10rem; } }
   .pricing-tables.plans--annually .switch .monthly {
     opacity: .35; }
   .pricing-tables.plans--annually .switch .annually {
@@ -576,21 +579,7 @@ button {
       padding: .5rem;
       border-radius: 50px;
       flex-wrap: wrap;
-      max-width: 420px;
-      overflow: hidden;
-      position: relative; }
-      .dev-by::after {
-        content: "";
-        display: block;
-        width: 420px;
-        height: 100%;
-        background-color: silver;
-        background-image: radial-gradient(white 15%, transparent 16%), radial-gradient(white 15%, transparent 16%);
-        background-size: 18px 18px;
-        background-position: 0 0, 30px 30px;
-        position: absolute;
-        opacity: .15;
-        z-index: -1; } }
+      max-width: 420px; } }
   .dev-by span:not(:last-child) {
     margin-right: .5rem; }
   .dev-by span a {
@@ -600,7 +589,7 @@ button {
       display: inline-block;
       width: 100%;
       height: 5px;
-      background: rgba(255, 255, 255, 0.19);
+      background: rgba(44, 121, 255, 0.19);
       position: absolute;
       bottom: 0;
       z-index: -1;
