@@ -1,0 +1,25 @@
+/* -------------
+# Flex
+---------------- */
+@mixin flex{
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin inline-flex{
+    display: -webkit-inline-flex;
+    display: inline-flex;
+}
+
+/* -------------
+# Grid
+---------------- */
+@mixin grid{
+    display: -ms-grid;
+    display: grid;
+}
+
+@mixin inline-grid{
+    display: -ms-inline-grid;
+    display: inline-grid;
+}
