@@ -1,0 +1,138 @@
+$baseFont: 'Roboto', sans-serif;
+$mainColor: #156ce0;
+
+body {
+   font-family: $baseFont;
+   background: linear-gradient(-45deg,rgba(#3EFB9F, 1) 10%,rgba(#4A2FEE, 1) );
+   background-attachment: fixed;
+}
+
+*, *::after, *::before {
+   box-sizing: border-box;
+   outline: 0;
+}
+
+a {
+   text-decoration: none;
+   color: inherit;
+   border-bottom: 1px dotted #fff;
+   transition: border 250ms ease;
+   &:hover {
+         border-bottom-color: transparent;
+   }
+}
+
+input,
+button[type=submit] {
+   border: 0;
+   font: {
+      family: $baseFont;
+      size: 20px;
+      weight: 700;
+   }
+   &::placeholder {
+      color: $mainColor;
+      font-weight: 400;
+   }
+}
+
+.signup-form {
+   width: 450px;
+   padding: 2.6rem;
+   background: #fff;
+   border-radius: 10px;
+   position: absolute;
+   top: 50%; left: 50%; 
+   transform: translate(-50%,-50%);
+   box-shadow: 0 10px 55px -10px rgba(black, .5);
+   text-align: center;
+   .site-logo {
+      margin: 1.4rem 0 2rem ;
+      display: flex;
+      justify-content: center;
+      span {
+         display: block;
+         width: 11px;
+         height: 11px;
+         background: $mainColor;
+         transform: rotate(45deg);
+         position: relative;
+         &::before, &::after {
+            display: block;
+            content: "";
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border: 3px solid $mainColor;
+            position: absolute;
+         }
+         &::before {
+            right: -19px;
+            top: -19px;
+         }
+
+         &::after {
+            right: -11px;
+            top: -11px;
+         }
+      }
+   }
+
+   input[type=text],
+   input[type=email],
+   input[type=password]{
+      margin-bottom: 1px;
+      width: 100%;
+      padding: 2.1rem 0 .4rem;;
+      border-bottom: 1px solid $mainColor;
+      color: $mainColor;
+   }
+   
+   button[type=submit] {
+      padding: 10px 65px 10px 40px;
+      margin-top: 2.7rem;
+      text-transform: uppercase;
+      letter-spacing: .3px;
+      border-radius: 50px;
+      background: $mainColor;
+      color: #fff;
+      box-shadow: 0 5px 10px rgba($mainColor, .35);
+      cursor: pointer;
+      position: relative;
+      transition: all 250ms ease;
+      font: {
+         weight: 700;
+         size: 17px;
+      }
+      
+      i {
+         margin-left: .7rem; 
+         position: absolute;
+         top: 5px;
+         right: 33px; 
+         font: {
+            weight: 600;
+            size: 30px;
+         }
+      }
+      &:hover {
+         transform: translateY(-4px);
+      }
+      &:active {
+         top: 2px;
+         left: 2px;
+      }
+   }
+   
+   .signin-text {
+      position: absolute;
+      bottom: -2rem;
+      left: .7rem;
+      color: #fff;
+      font: {
+         weight: 400;
+         size: 13px;
+      }
+   }
+   
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Calendar Plan - Tasks Events App (Freebies)</title>
+        <link rel="stylesheet" href="assets/css/normalize.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="https://anandchowdhary.github.io/ionicons-3-cdn/icons.css" integrity="sha384-+iqgM+tGle5wS+uPwXzIjZS5v6VkqCUV7YQ/e/clzRHAxYbzpUJ+nldylmtBWCP0" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    </head>
+    <body>
+
+        <form class="quick-reservation">
+            <div class="container">
+                <header class="quick-reservation__header">
+                    <h2 class="title">
+                        New Quick Reservation
+                    </h2>
+                    <div class="close-icon">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </header>
+                
+                <div class="quick-reservation__form">
+                    <section class="form__content">
+                        <div class="row-wrapper">
+                        <div class="ele adults">
+                            <label for="adults">Adults</label>
+                            <select name="adults" id="adults">
+                                <option value="hide">Adults</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                            </select>
+                        </div>
+                        <div class="ele children">
+                            <label for="children">Children</label>
+                            <select name="children" id="children">
+                                <option value="hide">Children</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                            </select>
+                        </div>
+                        <div class="ele rate-type">
+                            <label for="rateType">Rate Type</label>
+                            <select name="rateType" id="rateType">
+                                <option value="hide">Rate Type</option>
+                                <option value="">Rack Rate</option>
+                                <option value="">Rack Rate</option>
+                                <option value="">Rack Rate</option>
+                            </select>
+                        </div>
+                        <div class="ele rooms">
+                            <label for="Rooms">Rooms</label>
+                            <select name="rooms" id="Rooms">
+                                <option value="hide">Rooms</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                            </select>
+                        </div>         
+                        </div>
+                        <div class="row-wrapper">
+                        <div class="ele adults">
+                            <label for="title">Title</label>
+                            <select name="title" id="title">
+                                <option value="hide">Title</option>
+                                <option value="">Mr.</option>
+                                <option value="">Mrs.</option>
+                            </select>
+                        </div>
+                        <div class="ele first-name">
+                            <label for="firstName">First Name</label>
+                            <input type="text" value="" placeholder="First Name" id="firstName">
+                        </div>
+                        <div class="ele last-name">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" value="" placeholder="Last Name" id="lastName">
+                        </div>    
+                        </div>
+                        <div class="row-wrapper">
+                        <div class="ele email-address">
+                            <label for="emailAddress">Email Address</label>
+                            <input type="email" value="" placeholder="Enter Email" id="emailAddress">
+                        </div>
+                        <div class="ele phone-number">
+                            <label for="phoneNumber">Phone Number</label>
+                            <input type="text" value="" placeholder="Enter Phone Number" id="phoneNumber">
+                        </div> 
+                        
+                        </div>
+                        
+                        <div class="row-wrapper more-options">
+            
+                        <label for="single" class="radio">
+                            <input type="radio" name="plan" id="single" class="hidden"/>
+                            <span class="label"></span>Single
+                        </label>
+                        
+                        <label for="group" class="radio">
+                            <input type="radio" name="plan" id="group" class="hidden"/>
+                            <span class="label"></span>Group
+                        </label>
+                        
+                        <label for="business" class="radio">
+                            <input type="radio" name="plan" id="business" class="hidden"/>
+                            <span class="label"></span>Business
+                        </label>
+                        
+                        </div>
+                        
+                    </section>
+                </div>
+                
+                <div class="reservation-info">
+                    <div class="ele data">
+                        <h4 class="data__head">Room Type</h4>
+                        <p class="data__description">Deluxe</p>
+                    </div>
+                    <div class="ele data">
+                        <h4 class="data__head">Duration</h4>
+                        <p class="data__description">May 28 - Jun 2</p>
+                    </div>
+                    <div class="ele data">
+                        <h4 class="data__head">Price</h4>
+                        <p class="data__description">$45/night<br> Total $270</p>
+                    </div>
+                </div>
+                
+                <footer class="form__footer">
+                    <div class="footer-wrapper">
+                        <input type="submit" value="Tempt Reserve" class="">
+                        <input type="submit" value="Reserve" class="">
+                        <input type="button" value="Check-In" class="">
+                    </div>
+                </footer>
+            </div>
+        </form>
+        
+        <p class="after" style="display: none; color: #777; font-weight: 200;">Reload the browser window everytime you close the reservation form to show up again.</p>
+                        
+    <!-- JavaScript Files -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    </body>
+</html>

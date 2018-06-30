@@ -1,0 +1,182 @@
+// COLORS
+$colorDark: #2c2e3a;
+$textColor: #555;
+$authorColor: #fc0817;
+$qouteColor: #555;
+$quoteIcon: #dadada;
+$bookIcon: #d4cfcf;
+
+
+html, body {
+   margin: 0 2rem;
+   @media (max-width: 767px) {
+      margin: 0 .7rem;
+   }
+   color: $textColor;
+   font: {
+      family: 'Nunito', sans-serif;
+   }
+}
+*, *::before, *::after {
+   box-sizing: border-box;
+}
+
+blockquote {
+   margin: 0;
+   line-height: 1.45;
+   color: $qouteColor;
+   font: {
+      size: 15px;
+      weight: 500;
+   }
+}
+
+h2 {
+   margin: 0;
+   color: $colorDark;
+   font: {
+      size: 32px;
+      weight: 600;
+   } 
+}
+
+.testimonials {
+   padding: 4rem 0;
+   background: #fbfbfb;
+   box-shadow: 0 0 75px -9.5px rgba(black, .3);
+   .section-head {
+      text-align: center;
+      margin-bottom: 4rem;
+      position: relative;
+      z-index: 1;
+      &:before {
+         position: absolute;
+         top: 17px;
+         left: 0;
+         right: 0;
+         margin: auto;
+         content: "";
+         display: block;
+         width: 180px;
+         height: 2px;
+         border-radius: 15px;
+         background: $bookIcon;
+         z-index: -1;
+      }
+      i {
+         display: inline-block;
+         font-size: 32px;
+         font-weight: 900;
+         color: $bookIcon;
+         background: #fbfbfb;
+         padding: 0 .7rem;
+      }
+      .section__title {
+         margin-top: .9rem;
+      }
+   }
+   .wrapper {
+      padding: 0 4rem ;
+      @media (max-width: 767px) {
+         padding: 0 1rem ;
+      }
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-auto-rows: auto;
+      grid-row-gap: 2.7rem;
+      grid-column-gap: 1.9rem;
+      @media (min-width: 992px) {
+         grid-template-columns: 1fr 1fr 1fr;
+      }
+      @media (min-width: 768px) and (max-width: 991px) {
+         grid-template-columns: 1fr 1fr;
+      }
+      .col {         
+         .review {
+            &:not(:last-child) {
+               margin-bottom: 3rem;
+            }
+         }
+      }
+      .review {
+         .review-wrapper {
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 3.2px 4px rgba(black, .07);
+            padding: .5rem 1.3rem .5rem 3.1rem;
+            margin-bottom: 1.6rem;
+            position: relative;
+            &::before, &::after {
+               content: "";
+               display: block;
+               width: 0;
+               height: 0;
+               border-left: solid 13px transparent; 
+               border-right: solid 0px transparent; 
+               border-top: solid 13px #fff;
+               position: absolute;
+               left: .8rem;
+            }
+            &::before {
+               bottom: -13px;
+               filter: drop-shadow(0 3.2px 3px rgba(black, .1));
+            }
+            &::after {
+               bottom: -10px;
+            }
+            position: relative;
+            .review__text {
+               &::before {
+                  position: absolute;
+                  left: 14px;
+                  top: .9rem;
+                  content:"\f1f5";
+                  font-family: "Ionicons";
+                  font-size: 30px;
+                  color: $quoteIcon;
+                  transform: rotate(180deg);
+               }
+               p {
+
+               }
+            }
+         }
+         .review__author {
+            margin-left: .5rem;
+            display: flex;
+            .auhtor__avatar {
+               width: 52px;
+               height: 52px;
+               overflow: hidden;
+               margin-right: 1rem;
+               border-radius: 50%;
+               border: 2px solid #fff;
+               box-shadow: 0 3.2px 5px rgba(black, .05);
+               img {
+                  width: 100%;
+               }
+            }
+            .author__info {
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+               .author__name {
+                  margin: 0 0 .2em 0;
+                  color: $authorColor;
+                  font: {
+                     size: 20px;
+                     weight: 700;
+                  }
+               }
+               .author__job-title {
+                  margin: 0;
+                  font: {
+                     size: 15px;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
