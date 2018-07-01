@@ -12,6 +12,6 @@ Twitter: @ahmedhosna95
 
 • UI Design from [dribbble](https://dribbble.com/shots/3737655-Day-030-Pricing), I got it in order to implement it in HTML & CSS.
 
-## HTML/CSS Result - [Live Preview](https://goo.gl/tF3kwu)
+## HTML/CSS Result - [Live Preview](https://cdn.rawgit.com/ahmedhosna95/Front-end-Daily-Practice/54559721/Day017__PricingTables/PricingTables_01/index.html)
 
 ![](assets/img/frame-generic.png)
