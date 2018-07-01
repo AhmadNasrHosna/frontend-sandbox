@@ -15,3 +15,4 @@ Twitter: @ahmedhosna95
 # HTML/CSS Result - [Live Preview](https://cdn.rawgit.com/ahmedhosna95/Front-end-Daily-Practice/151e17f6/Day006/smart_cards/index.html)
 
 ![](img/frame-generic.png)
+
