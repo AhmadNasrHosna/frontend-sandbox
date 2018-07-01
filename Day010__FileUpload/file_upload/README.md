@@ -15,4 +15,4 @@ Twitter: @ahmedhosna95
 
 # HTML/CSS Result - [Live Preview](https://cdn.rawgit.com/ahmedhosna95/Front-end-Daily-Practice/e0a70c97/Day010__FileUpload/file_upload/index.html)
 
-![](assets/img/farame-generic.png)
+![](assets/img/frame-generic.png)
