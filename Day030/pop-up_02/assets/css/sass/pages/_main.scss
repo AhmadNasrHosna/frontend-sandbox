@@ -1,0 +1,63 @@
+//* { outline: 1px solid red; }
+
+.wrapper {
+    width: 550px;
+    min-height: 380px;
+    background: #fff;
+    padding: 3em 1em 1.5em;
+    @include flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: $br6;
+    //box-shadow: 0 10px 45px -15px rgba($colorPrimary, .3);
+    box-shadow: 0 2px 77px 0px rgba($colorShadow, .11);
+    position: absolute;
+    top: 50%;  left: 50%; 
+    transform: translate(-50%, -50%);
+    & > *:not(:last-child) {
+        margin-bottom: 1.4rem;
+    }
+    h4 {
+        position: relative;
+        &:before {
+            content: "";
+            display: block;
+            background: $bgButton;
+            width: 65px; height: 12px;
+            position: absolute;
+            top: -25px; left: 0;
+            z-index: 55;
+        }
+    }
+    .rate-button {
+        margin-top: .5em;
+    }
+    a {
+        font-size: $small;
+        overflow: hidden;
+        padding: .1em .3em;
+        color: lighten($colorPrimaryLight, 25);
+        border-bottom: 1px dotted lighten($colorPrimaryLight, 45);
+        font-weight: 600;
+        span {
+            position: relative;
+            transition: all 300ms ease;
+            display: inline-block;
+            &::after {
+                content: attr(data-hover);
+                content: attr(data-hover);
+                color: $bgButton;
+                position: absolute;
+                top: 100%; left: 0;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+        &:hover {
+            border-bottom: 1px dotted rgba($bgButton, .95);
+            span {
+                transform: translateY(-100%);
+            }
+        }
+    }
+}

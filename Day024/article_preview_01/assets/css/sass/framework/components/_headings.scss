@@ -1,0 +1,22 @@
+
+/* Headings */  
+
+h1, h2, h3, h4, h5, h6 {
+    color: $colorPrimary;
+}
+
+h2 {
+    line-height: 1.3;
+    font: {
+        family: $fontHeadings;
+        size: $xLarge;
+        weight: 500;
+    }
+}
+h3 {
+    font: {
+        size: $xSmall;;
+        weight: 600;
+    }
+}
+

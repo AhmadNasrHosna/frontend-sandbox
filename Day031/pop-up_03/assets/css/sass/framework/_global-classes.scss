@@ -1,0 +1,67 @@
+/* -----------------
+   # GLOBAL CLASEES
+--------------------*/
+
+.dis-block {
+    display: block;
+}
+.dis-block-sm {
+    @media (max-width: 767px) {
+        display: block;
+    }
+} 
+
+
+/* Aligning */
+.text-center {
+    text-align: center;
+}
+
+.text-center-sm {
+    @media (max-width: 767px) {
+        display: block;
+    }
+} 
+
+.text-left {
+    text-align: left;
+}
+
+.box-fit {
+    width: 100%;
+}
+
+/* Text Style */
+.caps {
+    text-transform: uppercase;
+}
+//---------
+.lspg1 {
+    letter-spacing: 1px;
+}
+.lspg1-5 {
+    letter-spacing: 1.5px;
+}
+.lspg2 {
+    letter-spacing: 2px;
+}
+.lspg3 {
+    letter-spacing: 3px;
+}
+.lspg-1 {
+    letter-spacing: -1px;
+}
+.lspg-2 {
+    letter-spacing: -2px;
+}
+.lspg-3 {
+    letter-spacing: -3px;
+}
+
+
+//---------
+
+/* Full Width */
+.box-fit {
+    width: 100%;
+}

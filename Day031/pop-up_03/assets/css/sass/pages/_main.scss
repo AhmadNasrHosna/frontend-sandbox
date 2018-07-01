@@ -1,0 +1,98 @@
+//* { outline: 1px solid red; }
+
+.wrapper {
+    width: 550px;
+    min-height: 400px;
+    background: #fff;
+    @include flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: $br30;
+    position: absolute;
+    top: 50%;  left: 50%; 
+    transform: translate(-50%, -50%);
+    //box-shadow: 0 10px 45px -15px rgba($colorPrimary, .3);
+    box-shadow: 0 2px 85px 0px rgba($colorShadow, .13);
+    & > *:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+    h4 {
+        position: relative;
+        &:before {
+            content: "";
+            display: block;
+            background: $bgButton;
+            width: 95%;
+            height: 25px;
+            position: absolute;
+            top: 21px;
+            right: -17px;
+            z-index: -1;
+        }
+    }
+    p{
+        width: 290px;
+        text-align: center;
+        font-size: $medium;
+    }
+    .input-email {
+        width: 82%;
+        position: relative;
+        input {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            padding: .85em 3.5em .85em 1.6em;
+            background: #fff;
+            border-radius: 23px;
+            box-shadow: 0 0px 45px -10px rgba($colorShadow, .27);
+        }
+        .send-button {
+            position: absolute;
+            top: 0; bottom: 0; right: 7px;
+            margin: auto 0;
+            width: 45px; height: 45px;
+            border-radius: $br50;
+            background: $colorPrimaryDark;
+            color: $white;
+            transition: all 300ms ease;
+            cursor: pointer;
+            outline: 0;
+            i {
+                font-size: 38px;
+            }
+            &:active {
+                width: 55px;
+            }
+        }
+    }
+    a {
+        font-size: $small;
+        overflow: hidden;
+        padding: .1em .3em;
+        color: lighten($colorPrimaryLight, 25);
+        border-bottom: 1px dotted lighten($colorPrimaryLight, 45);
+        font-weight: 600;
+        z-index: 10;
+        span {
+            position: relative;
+            transition: all 300ms ease;
+            display: inline-block;
+            &::after {
+                content: attr(data-hover);
+                color: $bgButton;
+                position: absolute;
+                top: 100%; left: 0;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+        &:hover {
+            border-bottom: 1px dotted rgba($bgButton, .95);
+            span {
+                transform: translateY(-100%);
+            }
+        }
+    }
+}
