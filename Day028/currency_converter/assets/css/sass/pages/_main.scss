@@ -1,0 +1,68 @@
+//* { outline: 1px solid red; }
+
+.wrapper {
+    display: flex;
+    width: 700px;
+    justify-content: center;
+    .inner-wrapper {
+        width: 330px;
+        height: 580px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        border-radius: $br3;
+        overflow: hidden;
+        background: #fff;
+        box-shadow: 0 10px 45px -15px rgba($colorPrimary, .3);
+
+        .currency {
+            flex: 1;
+            display: inherit;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            .currency__name {
+                margin: 0;
+            }
+            .currency__amount {
+                margin: 0;
+                font: {
+                    size: $xxxLarge;;
+                    weight: 400;
+                }
+                sub {
+                    margin-left: .1em;
+                    font-size: 55%;
+                    font-weight: 200;
+                    position: relative;
+                    bottom: 0px;
+                    opacity: .6;
+                }
+            }
+            .currency__shortname {
+                margin: 0;
+                font-size: aboveMedium;
+                font-weight: 700;
+                opacity: .3;
+            }
+        }
+        .currency-from {
+            background: $colorPrimary;
+            color: #fff;
+            padding: 1.5em 0 4em;
+
+        }
+        .currency-to {
+            background: $white;
+            flex-direction: column-reverse;
+            padding: 4em 0 1.5em;
+          
+        }
+        .currency-toggle {
+            position: absolute;
+            right: 50%; left: 50%; top: 50%; bottom: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+    }
+}

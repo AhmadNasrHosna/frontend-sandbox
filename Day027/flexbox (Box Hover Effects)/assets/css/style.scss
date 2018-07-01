@@ -1,0 +1,118 @@
+body {
+    background: #DADADA;
+    margin: 5rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #EF9B0F;
+    transition: all 300ms ease;
+    &:hover {
+        color: #333;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .tuty-muty-dog-xD {
+        margin-bottom: 1.5rem;
+        flex-basis: 49%;
+        .thumb {
+            position: relative;
+            a {
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 450px;
+                    object-fit: cover;
+                    object-position: center center;
+                    user-select: none;
+                }
+                &::before {
+                    content: '\f00e';
+                    font-family: "FontAwesome";
+                    display: block;
+                    width: 80px;
+                    height: 80px;
+                    text-align: center;
+                    line-height: 80px;
+                    font-size: 20px;
+                    border-radius: 50%;
+                    background: #fff;
+                    color: #EF9B0F;
+                    position: absolute;
+                    top: 0; bottom: 0;
+                    left: 0; right: 0;
+                    margin: auto;
+                    opacity: 0;
+                    transition: all 300ms ease;
+                }
+                &::after {
+                    content:'';
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    background: #fff;
+                    transition: all 300ms ease;
+                    opacity: 0;
+                    position: absolute; top: 0; ledt: 0;
+                }
+                
+            }
+        }
+        position: relative;
+        .details {
+            width: 100%;
+            padding: 0px;
+            opacity: 0;
+            position: absolute;
+            z-index: 999;
+            display: flex;
+            transition: all 300ms ease;
+            box-sizing: border-box;
+            box-shadow: 0 15px 15px  -5px rgba(black, .3);
+            .icons-group-wrapper {
+                a {
+                    cursor: pointer;
+                    &:not(:last-child) {
+                        margin-right: .5rem;
+                    }
+                }
+            }
+            .date-like {
+                margin-left: auto;
+            }
+        }
+        &:hover {
+            .thumb {
+                a { 
+                    &::before {
+                        opacity: .9;
+                    }
+                    &:after {
+                        opacity: .15;
+                    }
+                }
+            }
+            .details {
+                background: #fff;
+                padding: 20px 30px;
+                opacity: 1;
+            } 
+
+        }
+        &.inside {
+            display: flex;
+            .details {
+                bottom: 0;
+                padding: 20px 30px;
+                box-shadow: none !important;
+            }
+        }
+    }
+}
