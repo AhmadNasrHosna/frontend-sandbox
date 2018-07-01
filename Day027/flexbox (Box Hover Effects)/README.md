@@ -12,6 +12,6 @@ Twitter: @ahmedhosna95
 
 • UI Design by Me
 
-# HTML/CSS Result - [Live Preview](#)
+# HTML/CSS Result - [Live Preview](https://cdn.rawgit.com/ahmedhosna95/Front-end-Daily-Practice/f7344cb4/Day027/flexbox%20(Box%20Hover%20Effects)/index.html)
 
 ![](assets/img/frame-generic.png)
