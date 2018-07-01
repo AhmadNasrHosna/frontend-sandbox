@@ -14,4 +14,4 @@ Twitter: @ahmedhosna95
 
 ## HTML/CSS Result - [Live Preview](https://cdn.rawgit.com/ahmedhosna95/Front-end-Daily-Practice/463506d0/Day031/pop-up_03/index.html)
 
-![](assets/img/frame-generic.png)
+![](assets/img/frame-genericc.png)
