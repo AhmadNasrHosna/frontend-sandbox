@@ -12,6 +12,6 @@ Twitter: @ahmedhosna95
 
 • UI Design from [dribbble](https://dribbble.com/shots/2404227-UI-challenge-Pricing-030), I got it in order to implement it in HTML & CSS.
 
-## HTML/CSS Result - [Live Preview](https://goo.gl/j3dujo)
+## HTML/CSS Result - [Live Preview](https://cdn.rawgit.com/ahmedhosna95/Front-end-Daily-Practice/5a18e9e1/Day019/PricingTables_03/index.html)
 
 ![](assets/img/frame-generic.png)
