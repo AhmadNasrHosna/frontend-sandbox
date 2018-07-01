@@ -12,6 +12,6 @@ Twitter: @ahmedhosna95
 
 • UI Design from [dribbble](https://dribbble.com/shots/4540585-Nav-Menu-UI-Design-Rebound-Freebies), I got it in order to implement it in HTML & CSS.
 
-# HTML/CSS Result - [Live Preview](#)
+# HTML/CSS Result - [Live Preview](https://cdn.rawgit.com/ahmedhosna95/Front-end-Daily-Practice/e9c3c621/Day004/menu_ui-design/index.html)
 
 ![](assets/img/frame-generic.png)
