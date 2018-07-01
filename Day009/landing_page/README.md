@@ -13,6 +13,6 @@ Twitter: @ahmedhosna95
 • UI Design from [dribbble](https://dribbble.com/shots/4685603-Chudo-Landing-Page
 ), I got it in order to implement it in HTML & CSS.
 
-# HTML/CSS Result - [Live Preview](#)
+# HTML/CSS Result - [Live Preview](https://cdn.rawgit.com/ahmedhosna95/Front-end-Daily-Practice/441cd988/Day009/landing_page/index.html)
 
 ![](assets/img/frame-generic.png)
