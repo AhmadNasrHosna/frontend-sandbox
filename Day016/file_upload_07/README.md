@@ -13,6 +13,6 @@ Twitter: @ahmedhosna95
 
 • UI Design from [dribbble](https://dribbble.com/shots/2825840-Day-41-File-Upload-Widget), I got it in order to implement it in HTML & CSS.
 
-## HTML/CSS Result - [Live Preview](https://goo.gl/Qxjho1)
+## HTML/CSS Result - [Live Preview](https://cdn.rawgit.com/ahmedhosna95/Front-end-Daily-Practice/51d4258b/Day016/file_upload_07/index.html)
 
 ![](assets/img/frame-generic.png)
