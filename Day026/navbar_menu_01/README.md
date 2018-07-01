@@ -12,6 +12,6 @@ Twitter: @ahmedhosna95
 
 • UI Design by Me for #CodePenChallenge!
 
-# HTML/CSS Result - [Live Preview](#)
+# HTML/CSS Result - [Live Preview](https://cdn.rawgit.com/ahmedhosna95/Front-end-Daily-Practice/333d00c2/Day026/navbar_menu_01/index.html)
 
 ![](assets/img/menu-for-dribbble.gif)
