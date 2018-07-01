@@ -12,6 +12,6 @@ Twitter: @ahmedhosna95
 
 • UI Design from [dribbble](https://dribbble.com/shots/4017576-Pop-Up-Daily-Ui-16), I got it in order to implement it in HTML & CSS.
 
-## HTML/CSS Result - [Live Preview](#)
+## HTML/CSS Result - [Live Preview](https://cdn.rawgit.com/ahmedhosna95/Front-end-Daily-Practice/13f8e0e0/Day030/pop-up_02/index.html)
 
-![](assets\img\frame-generic.png)
+![](assets/img/frame-generic.png)
