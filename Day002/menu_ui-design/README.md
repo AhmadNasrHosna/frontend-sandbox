@@ -12,6 +12,6 @@ Twitter: @ahmedhosna95
 
 • UI Design from [dribbble](https://dribbble.com/shots/4540118-Menu-UI-Design), I got it in order to implement it in HTML & CSS.
 
-# HTML/CSS Result - [Live Preview](#)
+# HTML/CSS Result - [Live Preview](https://cdn.rawgit.com/ahmedhosna95/Front-end-Daily-Practice/f2024f15/Day002/menu_ui-design/index.html)
 
 ![](assets/img/frame-generic.png)
